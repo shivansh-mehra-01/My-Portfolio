@@ -104,20 +104,20 @@ export default function Services() {
 
   const faqs = [
     {
-      q: "What does NEXUS build?",
-      a: "We build custom AI solutions (chatbots, automation workflow), premium corporate websites, SaaS admin dashboards, and cross-platform mobile apps for startups and local businesses.",
+      q: "What do you build?",
+      a: "I build custom AI solutions (chatbots, automation workflow), premium corporate websites, SaaS admin dashboards, and cross-platform mobile apps for startups and local businesses.",
     },
     {
       q: "How fast can you launch an MVP?",
-      a: "Depending on complexity, our standard Startup MVP cycle takes 3 to 6 weeks from initial requirement discussion to live production deployment.",
+      a: "Depending on complexity, my standard Startup MVP cycle takes 3 to 6 weeks from initial requirement discussion to live production deployment.",
     },
     {
       q: "Do you support custom payment and database integrations?",
-      a: "Yes. We integrate secure Stripe/Razorpay checkouts, scheduling tools (Calendly/custom), scalable SQL/NoSQL databases, and custom API layers.",
+      a: "Yes. I integrate secure Stripe/Razorpay checkouts, scheduling tools (Calendly/custom), scalable SQL/NoSQL databases, and custom API layers.",
     },
     {
       q: "What post-launch support do you provide?",
-      a: "We offer continuous maintenance plans, active server uptime SLA monitoring, dependency updates, and bug fixes to ensure your software grows with your traffic.",
+      a: "I offer continuous maintenance plans, active server uptime SLA monitoring, dependency updates, and bug fixes to ensure your software grows with your traffic.",
     },
   ];
 
@@ -530,7 +530,7 @@ export default function Services() {
               <div style={{ position: "relative", zIndex: 2 }}>
                 <h3 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-space-grotesk)" }}>Knowledge Base</h3>
                 <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "32px" }}>
-                  Nexus support index querying. Live updates on SLAs, methodologies, and framework queries.
+                  Find answers to common questions about working style, timelines, and technical frameworks.
                 </p>
                 
                 <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "40px" }}>

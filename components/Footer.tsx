@@ -2,22 +2,20 @@
 
 import Link from "next/link";
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
-import NexusLogo from "./NexusLogo";
+import SMMonogram from "./NexusLogo";
 
-function LinkedinIcon({ size = 14, style }: { size?: number; style?: React.CSSProperties }) {
+function GithubIcon({ size = 16 }: { size?: number }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={style}
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+}
+
+function LinkedinIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
       <rect x="2" y="9" width="4" height="12" />
       <circle cx="4" cy="4" r="2" />
@@ -25,35 +23,14 @@ function LinkedinIcon({ size = 14, style }: { size?: number; style?: React.CSSPr
   );
 }
 
-function InstagramIcon({ size = 14, style }: { size?: number; style?: React.CSSProperties }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={style}
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  );
-}
-
 export default function Footer() {
-  const primaryGlow = "#00E5FF";
-  const secondaryGlow = "#00FFAB";
+  const primaryGlow = "#FF6B2C";
+  const secondaryGlow = "#FFB800";
   const borderSoft = "rgba(255, 255, 255, 0.08)";
 
   return (
     <footer style={{ 
-      background: "rgba(5, 5, 8, 0.95)", 
+      background: "rgba(8, 5, 2, 0.95)", 
       position: "relative",
       borderTop: `1px solid ${borderSoft}`,
       overflow: "hidden"
@@ -66,7 +43,7 @@ export default function Footer() {
         transform: "translate(-50%, -50%)",
         width: "100%",
         height: "200px",
-        background: `radial-gradient(ellipse at center, rgba(0, 229, 255, 0.08) 0%, transparent 60%)`,
+        background: `radial-gradient(ellipse at center, rgba(255, 107, 44, 0.08) 0%, transparent 60%)`,
         pointerEvents: "none",
         zIndex: 0
       }} />
@@ -94,7 +71,7 @@ export default function Footer() {
               gap: "10px",
             }}
           >
-            <NexusLogo size={28} style={{ marginRight: 0 }} />
+            <SMMonogram size={28} style={{ marginRight: 0 }} />
             <span style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontWeight: 800,
@@ -103,20 +80,18 @@ export default function Footer() {
               letterSpacing: "-0.03em",
               display: "inline-flex",
               alignItems: "center",
-              textTransform: "uppercase"
             }}>
-              NEX
+              Shivansh
               <span style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontStyle: "normal",
                 fontWeight: 800,
-                textTransform: "uppercase",
                 fontSize: "1.4rem",
                 background: `linear-gradient(90deg, ${primaryGlow}, ${secondaryGlow})`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent"
               }}>
-                us
+                .dev
               </span>
             </span>
           </Link>
@@ -129,12 +104,12 @@ export default function Footer() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
             }}
           >
-            Engineering premium agentic AI interfaces, elite web architectures, and highly scalable mobile solutions.
+            Web & Mobile Developer crafting production-grade apps, AI integrations, and scalable systems.
           </p>
           <div style={{ display: "flex", gap: "12px", marginTop: "8px" }}>
             {[
-              { icon: <LinkedinIcon size={16} />, link: "https://www.linkedin.com/in/shivam-kumar-maurya-000370251/", label: "LinkedIn" },
-              { icon: <InstagramIcon size={16} />, link: "https://www.instagram.com/mauryashivamkumar841/", label: "Instagram" }
+              { icon: <LinkedinIcon size={16} />, link: "https://linkedin.com/in/shivanshmehra01", label: "LinkedIn" },
+              { icon: <GithubIcon size={16} />, link: "https://github.com/shivansh-mehra-01", label: "GitHub" },
             ].map((social, idx) => (
               <a
                 key={idx}
@@ -155,7 +130,7 @@ export default function Footer() {
                   backdropFilter: "blur(10px)"
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(0, 229, 255, 0.1)";
+                  e.currentTarget.style.background = "rgba(255, 107, 44, 0.1)";
                   e.currentTarget.style.borderColor = primaryGlow;
                   e.currentTarget.style.color = primaryGlow;
                   e.currentTarget.style.transform = "translateY(-2px)";
@@ -186,13 +161,19 @@ export default function Footer() {
               color: primaryGlow,
             }}
           >
-            Directory
+            Navigation
           </h4>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            {["Home", "Works", "Services", "Team", "Contact"].map((item) => (
+            {[
+              { label: "Home", href: "/" },
+              { label: "Portfolio", href: "/works" },
+              { label: "Services", href: "/services" },
+              { label: "About Me", href: "/about" },
+              { label: "Contact", href: "/contact" },
+            ].map((item) => (
               <Link
-                key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 style={{
                   color: "rgba(255, 255, 255, 0.7)",
                   fontSize: "0.95rem",
@@ -212,7 +193,7 @@ export default function Footer() {
                   e.currentTarget.style.transform = "none";
                 }}
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </div>
@@ -230,11 +211,11 @@ export default function Footer() {
               color: primaryGlow,
             }}
           >
-            Direct Channels
+            Get In Touch
           </h4>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "flex-start" }}>
             <a
-              href="https://chat.whatsapp.com/IA8ZkRoQWF2DG1crFZjOjN"
+              href="https://wa.me/919303164688"
               target="_blank"
               rel="noreferrer"
               style={{ 
@@ -242,8 +223,8 @@ export default function Footer() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "10px",
-                background: "rgba(0, 255, 171, 0.05)",
-                border: `1px solid rgba(0, 255, 171, 0.2)`,
+                background: "rgba(255, 184, 0, 0.05)",
+                border: `1px solid rgba(255, 184, 0, 0.2)`,
                 borderRadius: "100px",
                 color: secondaryGlow,
                 fontSize: "0.9rem",
@@ -253,12 +234,12 @@ export default function Footer() {
                 transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(0, 255, 171, 0.15)";
-                e.currentTarget.style.boxShadow = `0 4px 15px rgba(0, 255, 171, 0.2)`;
+                e.currentTarget.style.background = "rgba(255, 184, 0, 0.15)";
+                e.currentTarget.style.boxShadow = `0 4px 15px rgba(255, 184, 0, 0.2)`;
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "rgba(0, 255, 171, 0.05)";
+                e.currentTarget.style.background = "rgba(255, 184, 0, 0.05)";
                 e.currentTarget.style.boxShadow = "none";
                 e.currentTarget.style.transform = "none";
               }}
@@ -268,7 +249,7 @@ export default function Footer() {
               <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: secondaryGlow, boxShadow: `0 0 8px ${secondaryGlow}`, animation: "pulse 2s infinite" }} />
             </a>
             <a
-              href="mailto:build@nexus.ac.in"
+              href="mailto:mehrashiv8889@gmail.com"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -283,13 +264,13 @@ export default function Footer() {
               onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)"}
             >
               <Mail size={16} style={{ color: primaryGlow }} />
-              <span>build@nexus.ac.in</span>
+              <span>mehrashiv8889@gmail.com</span>
               <ArrowUpRight size={14} style={{ opacity: 0.5 }} />
             </a>
           </div>
         </div>
 
-        {/* Hub Location (Telemetry Card) */}
+        {/* Location Card */}
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <h4
             style={{
@@ -301,17 +282,17 @@ export default function Footer() {
               color: primaryGlow,
             }}
           >
-            Core Node
+            Location
           </h4>
           <div style={{ 
             padding: "24px",
-            background: "rgba(10, 10, 15, 0.6)",
-            border: `1px solid rgba(0, 229, 255, 0.2)`,
+            background: "rgba(10, 7, 2, 0.6)",
+            border: `1px solid rgba(255, 107, 44, 0.2)`,
             borderRadius: "16px",
             position: "relative",
             overflow: "hidden",
             backdropFilter: "blur(10px)",
-            boxShadow: "inset 0 0 30px rgba(0, 229, 255, 0.05)"
+            boxShadow: "inset 0 0 30px rgba(255, 107, 44, 0.05)"
           }}>
             <div style={{
               position: "absolute",
@@ -323,10 +304,10 @@ export default function Footer() {
               boxShadow: `0 0 15px ${primaryGlow}`,
             }} />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Global Gateway</span>
-              <span style={{ color: secondaryGlow, display: "flex", alignItems: "center", gap: "6px", fontSize: "0.7rem", fontFamily: "var(--font-mono), monospace", fontWeight: 700, background: "rgba(0, 255, 171, 0.1)", padding: "2px 8px", borderRadius: "100px", border: "1px solid rgba(0, 255, 171, 0.2)" }}>
+              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Based In</span>
+              <span style={{ color: secondaryGlow, display: "flex", alignItems: "center", gap: "6px", fontSize: "0.7rem", fontFamily: "var(--font-mono), monospace", fontWeight: 700, background: "rgba(255, 184, 0, 0.1)", padding: "2px 8px", borderRadius: "100px", border: "1px solid rgba(255, 184, 0, 0.2)" }}>
                 <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: secondaryGlow, boxShadow: `0 0 6px ${secondaryGlow}`, animation: "pulse 2s infinite" }} />
-                ACTIVE
+                OPEN TO WORK
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "1.1rem", color: "#ffffff", fontWeight: 700, marginBottom: "8px", fontFamily: "var(--font-space-grotesk), sans-serif" }}>
@@ -334,7 +315,7 @@ export default function Footer() {
               Bhopal, MP, India
             </div>
             <div style={{ fontSize: "0.75rem", color: primaryGlow, fontFamily: "var(--font-mono), monospace", letterSpacing: "0.05em", opacity: 0.8 }}>
-              SYS_LOC: 22.7196° N, 75.8577° E
+              Remote Friendly · Worldwide
             </div>
           </div>
         </div>
@@ -358,7 +339,7 @@ export default function Footer() {
         }}
       >
         <span style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", display: "inline-block", fontFamily: "var(--font-space-grotesk), sans-serif" }}>
-          &copy; {new Date().getFullYear()}{" "}NEXUS. Built with Agentic Engineering.
+          &copy; {new Date().getFullYear()} Shivansh Mehra. Built with passion & coffee.
         </span>
         <div style={{ display: "flex", gap: "24px" }}>
           {[

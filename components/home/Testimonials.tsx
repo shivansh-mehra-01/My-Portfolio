@@ -29,17 +29,17 @@ export default function Testimonials() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
           {[
             {
-              quote: "NEXUS demonstrated outstanding technical depth during the National Hackathon. They built a production-ready AI inference dashboard in 48 hours that handled mock drifts effortlessly.",
+              quote: "Shivansh demonstrated outstanding technical depth during the National Hackathon. He and his team built a production-ready AI inference dashboard in 48 hours that handled mock drifts effortlessly.",
               author: "Dr. A. Sharma",
               role: "Hackathon Mentor & System Architect"
             },
             {
-              quote: "We hired the Nexus team to design and build our automated customer chatbot system. They delivered the MVP in 3 weeks, and it now handles over 40% of our out-of-hours leads autonomously.",
+              quote: "We hired Shivansh to design and build our automated customer chatbot system. He delivered the MVP in 3 weeks, and it now handles over 40% of our out-of-hours leads autonomously.",
               author: "R. Singhal",
               role: "Founder, local edTech startup"
             },
             {
-              quote: "Their white-labeled ordering client saved us thousands in commission fees. The UI is clean, and driver notifications work in real-time. Extremely organized group.",
+              quote: "His white-labeled ordering client saved us thousands in commission fees. The UI is clean, and driver notifications work in real-time. Extremely organized developer.",
               author: "M. Patel",
               role: "Operations Director, Patel Foods"
             }

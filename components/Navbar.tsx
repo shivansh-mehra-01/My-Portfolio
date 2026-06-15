@@ -1,15 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
-import { Zap } from "lucide-react";
-import NexusLogo from "./NexusLogo";
+import { Send } from "lucide-react";
+import SMMonogram from "./NexusLogo";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check on mount
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
@@ -25,11 +43,11 @@ export default function Navbar() {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <Link href="/" className={styles.logo} onClick={closeMenu}>
-        <NexusLogo size={34} style={{ marginRight: 0 }} />
+        <SMMonogram size={34} style={{ marginRight: 0 }} />
         <span className={styles.logoText}>
-          NEX<span className={styles.logoSerif}>us</span>
+          Shivansh<span className={styles.logoSerif}>.dev</span>
         </span>
       </Link>
 
@@ -46,7 +64,7 @@ export default function Navbar() {
           className={`${styles.link} ${isActive("/works") ? styles.active : ""}`}
           onClick={(e) => handleLinkClick(e, "/works")}
         >
-          Works
+          Portfolio
         </Link>
         <Link
           href="/services"
@@ -56,11 +74,11 @@ export default function Navbar() {
           Services
         </Link>
         <Link
-          href="/team"
-          className={`${styles.link} ${isActive("/team") ? styles.active : ""}`}
-          onClick={(e) => handleLinkClick(e, "/team")}
+          href="/about"
+          className={`${styles.link} ${isActive("/about") ? styles.active : ""}`}
+          onClick={(e) => handleLinkClick(e, "/about")}
         >
-          Team
+          About
         </Link>
         <Link
           href="/contact"
@@ -69,7 +87,7 @@ export default function Navbar() {
         >
           Contact
         </Link>
-        
+
         {/* Mobile CTA inside menu drawer */}
         <Link
           href="/contact"
@@ -77,12 +95,12 @@ export default function Navbar() {
           style={{ display: "none" }}
           onClick={(e) => handleLinkClick(e, "/contact")}
         >
-          Let's Build <Zap size={14} />
+          Hire Me <Send size={14} />
         </Link>
       </nav>
 
       <Link href="/contact" className={styles.ctaBtn}>
-        Let's Build <Zap size={14} />
+        Hire Me <Send size={14} />
       </Link>
 
       <button

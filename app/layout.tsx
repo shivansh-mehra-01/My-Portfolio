@@ -25,20 +25,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://new-website-for-nexus.vercel.app"),
-  title: "NEXUS — Web, Mobile & AI Development Agency | Bhopal, India",
-  description: "NEXUS builds production-grade websites, mobile apps, and AI systems for startups, local businesses, and SaaS founders. Hackathon champions. Delivering in weeks, not months.",
+  metadataBase: new URL("https://shivanshmehra.dev"),
+  title: "Shivansh Mehra — Web & Mobile Developer | Freelancer",
+  description:
+    "Shivansh Mehra is a full-stack & mobile developer specializing in React, Next.js, Node.js, React Native, and AI integrations. Available for freelance projects.",
   openGraph: {
-    title: "NEXUS — Web, Mobile & AI Development Agency",
-    description: "NEXUS builds production-grade websites, mobile apps, and AI systems.",
-    url: "https://new-website-for-nexus.vercel.app",
-    siteName: "NEXUS",
+    title: "Shivansh Mehra — Web & Mobile Developer",
+    description:
+      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
+    url: "https://shivanshmehra.dev",
+    siteName: "Shivansh Mehra",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "NEXUS Cover",
+        alt: "Shivansh Mehra Portfolio",
       },
     ],
     locale: "en_US",
@@ -46,14 +48,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEXUS — Web, Mobile & AI Development Agency",
-    description: "NEXUS builds production-grade websites, mobile apps, and AI systems.",
+    title: "Shivansh Mehra — Web & Mobile Developer",
+    description:
+      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
     images: ["/og-image.jpg"],
   },
 };
 
 export const viewport = {
-  themeColor: "#000000",
+  themeColor: "#FF6B2C",
 };
 
 export default function RootLayout({
@@ -62,7 +65,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
+    >
       <body>
         {/* Lenis Smooth Scrolling wrapper */}
         <SmoothScroll>
@@ -85,7 +92,7 @@ export default function RootLayout({
 
           {/* Floating WhatsApp CTA */}
           <a
-            href="https://chat.whatsapp.com/IA8ZkRoQWF2DG1crFZjOjN"
+            href="https://wa.me/919303164688"
             target="_blank"
             rel="noreferrer"
             aria-label="Chat on WhatsApp"

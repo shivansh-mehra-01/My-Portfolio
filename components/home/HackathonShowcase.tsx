@@ -100,7 +100,7 @@ export default function HackathonShowcase() {
             National Hackathons <span className="font-serif-i" style={{ color: "var(--accent)" }}>Won</span>
           </h2>
           <p style={{ color: "#A0A0A0", fontSize: "0.95rem", marginTop: "8px" }}>
-            Our engineering team has competed nationally, building and scaling systems under intense time pressure.
+            I have competed nationally, building and scaling systems under intense time pressure.
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export default function HackathonShowcase() {
                   marginBottom: "20px",
                 }}
               >
-                Out of <strong style={{ color: "var(--foreground)" }}>200+ competing teams</strong> and innovators across multiple institutions, NEXUS secured the <strong style={{ color: "var(--accent)" }}>1st Prize (₹20,000)</strong> at the prestigious Technocrats Innovation Challenge 2K26. Through a demanding <strong style={{ color: "var(--foreground)" }}>36-hour innovation sprint</strong>, our team successfully advanced through multiple evaluation rounds and emerged as the overall champions with <strong style={{ color: "var(--foreground)" }}>SHEild AI</strong>, an AI-powered platform focused on Women Safety, Empowerment, and Social Impact.
+                Out of <strong style={{ color: "var(--foreground)" }}>200+ competing teams</strong> and innovators across multiple institutions, my team secured the <strong style={{ color: "var(--accent)" }}>1st Prize (₹20,000)</strong> at the prestigious Technocrats Innovation Challenge 2K26. Through a demanding <strong style={{ color: "var(--foreground)" }}>36-hour innovation sprint</strong>, our team successfully advanced through multiple evaluation rounds and emerged as the overall champions with <strong style={{ color: "var(--foreground)" }}>SHEild AI</strong>, an AI-powered platform focused on Women Safety, Empowerment, and Social Impact.
               </p>
 
               <div
@@ -343,7 +343,7 @@ export default function HackathonShowcase() {
                   marginBottom: "20px",
                 }}
               >
-                Competing against <strong style={{ color: "var(--foreground)" }}>600+ teams</strong> and over <strong style={{ color: "var(--foreground)" }}>2,800 participants</strong> from across India, NEXUS secured the <strong style={{ color: "var(--accent)" }}>Runner-Up Position (₹12,000)</strong> at the prestigious BGI Hackathon 2026 held in Bhopal. Through multiple rounds of technical evaluation, mentorship sessions, and final pitching, our team demonstrated exceptional innovation and execution with <strong style={{ color: "var(--foreground)" }}>SHEild AI</strong>, an intelligent safety platform designed to empower women and vulnerable communities.
+                Competing against <strong style={{ color: "var(--foreground)" }}>600+ teams</strong> and over <strong style={{ color: "var(--foreground)" }}>2,800 participants</strong> from across India, my team secured the <strong style={{ color: "var(--accent)" }}>Runner-Up Position (₹12,000)</strong> at the prestigious BGI Hackathon 2026 held in Bhopal. Through multiple rounds of technical evaluation, mentorship sessions, and final pitching, our team demonstrated exceptional innovation and execution with <strong style={{ color: "var(--foreground)" }}>SHEild AI</strong>, an intelligent safety platform designed to empower women and vulnerable communities.
               </p>
 
               <div

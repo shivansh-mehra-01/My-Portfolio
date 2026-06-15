@@ -1,24 +1,41 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
 
-export default function NexusLogo({ size = 26, style }: { size?: number; style?: React.CSSProperties }) {
+interface LogoProps {
+  size?: number;
+  style?: React.CSSProperties;
+}
+
+export default function SMMonogram({ size = 34, style }: LogoProps) {
   return (
-    <Image 
-      src="/images/logo.png" 
-      alt="Nexus Logo"
+    <svg
       width={size}
       height={size}
-      style={{
-        display: "inline-block",
-        verticalAlign: "middle",
-        marginRight: "10px",
-        objectFit: "contain",
-        transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-        ...style
-      }}
-      className="nexus-logo-icon"
-    />
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}
+    >
+      <defs>
+        <linearGradient id="smGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FF6B2C" />
+          <stop offset="100%" stopColor="#FFB800" />
+        </linearGradient>
+      </defs>
+      <rect width="40" height="40" rx="10" fill="url(#smGrad)" opacity="0.15" />
+      <rect width="40" height="40" rx="10" fill="none" stroke="url(#smGrad)" strokeWidth="1.2" opacity="0.6" />
+      <text
+        x="50%"
+        y="56%"
+        dominantBaseline="middle"
+        textAnchor="middle"
+        fill="url(#smGrad)"
+        fontSize="15"
+        fontWeight="800"
+        fontFamily="var(--font-space-grotesk-sans), sans-serif"
+        letterSpacing="-0.5"
+      >
+        SM
+      </text>
+    </svg>
   );
 }

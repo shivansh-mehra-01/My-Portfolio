@@ -1,19 +1,19 @@
 :root {
-  /* === BLACK / ELECTRIC GREEN / WHITE PALETTE — DARK MODE === */
-  --background: #020907;
+  /* === BLACK / ORANGE / GOLD PALETTE — DARK MODE === */
+  --background: #09070200;
   --surface-1: #111111;
   --surface-2: #181818;
   --foreground: #FFFFFF;
 
-  /* Primary Accent — Electric Green */
-  --accent: #00FFAB;
-  --accent-rgb: 0, 255, 171;
-  --accent-muted: rgba(0, 255, 171, 0.10);
-  --accent-dark: #00CC88;
+  /* Primary Accent — Vibrant Orange */
+  --accent: #FF6B2C;
+  --accent-rgb: 255, 107, 44;
+  --accent-muted: rgba(255, 107, 44, 0.10);
+  --accent-dark: #E05520;
 
-  /* Secondary */
-  --teal: #00FFAB;
-  --teal-rgb: 0, 255, 171;
+  /* Secondary — Gold */
+  --teal: #FFB800;
+  --teal-rgb: 255, 184, 0;
 
   /* Text Hierarchy */
   --muted: #A0A0A0;
@@ -22,9 +22,9 @@
   /* Card System */
   --card-bg: rgba(255, 255, 255, 0.04);
   --card-border: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(0, 255, 171, 0.40);
+  --card-border-hover: rgba(255, 107, 44, 0.40);
   --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
-  --glow-color: rgba(0, 255, 171, 0.15);
+  --glow-color: rgba(255, 107, 44, 0.15);
 
   /* Fonts */
   --font-manrope: var(--font-plus-jakarta-sans);
@@ -34,11 +34,11 @@
   --font-serif-italic: var(--font-space-grotesk-sans);
   --font-mono: var(--font-jetbrains-mono);
 
-  /* Cyber colors */
-  --cyber-cyan: #00FFAB;
-  --cyber-green: #00FFAB;
-  --cyber-purple: #00FFAB;
-  --cyber-pink: #00FFAB;
+  /* Warm colors */
+  --cyber-cyan: #FFB800;
+  --cyber-green: #FF6B2C;
+  --cyber-purple: #FF6B2C;
+  --cyber-pink: #FFB800;
 }
 
 * {
@@ -51,7 +51,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #020907;
+  background: #0a0704;
   color: #FFFFFF;
   font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -74,7 +74,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00FFAB;
+  background: #FF6B2C;
 }
 
 /* Subtle dark grid overlay */
@@ -546,7 +546,7 @@ body {
   right: 5%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0, 255, 171, 0.22) 0%, rgba(0, 255, 171, 0.04) 50%, transparent 75%);
+  background: radial-gradient(circle, rgba(255, 107, 44, 0.18) 0%, rgba(255, 107, 44, 0.04) 50%, transparent 75%);
   animation: float-blob-1 25s ease-in-out infinite alternate;
 }
 
@@ -555,7 +555,7 @@ body {
   left: -10%;
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle, rgba(0, 255, 171, 0.10) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 184, 0, 0.10) 0%, transparent 65%);
   animation: float-blob-2 32s ease-in-out infinite alternate;
 }
 
@@ -564,7 +564,7 @@ body {
   right: -15%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(0, 255, 171, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 44, 0.07) 0%, transparent 70%);
   animation: float-blob-1 20s ease-in-out infinite alternate-reverse;
 }
 
@@ -664,17 +664,13 @@ body {
 
 .home-hero::before {
   background:
-    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(0, 255, 171, 0.08) 0%, transparent 65%);
+    radial-gradient(ellipse 70% 50% at 80% 20%, rgba(255, 107, 44, 0.08) 0%, transparent 65%);
   opacity: 1;
 }
 
 .home-hero::after {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
-  opacity: 0.5;
+  background-image: none;
+  opacity: 0;
 }
 
 .home-hero-grid {
@@ -694,11 +690,11 @@ body {
 
 .hero-gradient-word {
   color: transparent;
-  background: linear-gradient(92deg, #00FFAB 0%, #00CC88 50%, #00FFAB 100%);
+  background: linear-gradient(92deg, #FF6B2C 0%, #FFB800 50%, #FF6B2C 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  filter: drop-shadow(0 0 28px rgba(0, 255, 171, 0.25));
+  filter: drop-shadow(0 0 28px rgba(255, 107, 44, 0.35));
   animation: gradientSlide 4s ease-in-out infinite;
 }
 
@@ -732,7 +728,7 @@ body {
 
 .hero-metric strong {
   font-family: var(--font-space-grotesk), sans-serif;
-  color: #00FFAB;
+  color: #FF6B2C;
   font-size: 1.1rem;
   line-height: 1;
   margin-bottom: 6px;
@@ -752,9 +748,9 @@ body {
 }
 
 .hero-tags span:hover {
-  color: #00FFAB !important;
-  border-color: rgba(0, 255, 171, 0.5) !important;
-  background: rgba(0, 255, 171, 0.08) !important;
+  color: #FF6B2C !important;
+  border-color: rgba(255, 107, 44, 0.5) !important;
+  background: rgba(255, 107, 44, 0.08) !important;
   transform: translateY(-2px);
 }
 
@@ -1081,9 +1077,9 @@ body {
   overflow: hidden;
   padding: 48px;
   background: #111111;
-  border: 1px solid rgba(0, 255, 171, 0.10);
+  border: 1px solid rgba(255, 107, 44, 0.10);
   border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 60px rgba(0, 255, 171, 0.04);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 107, 44, 0.04);
 }
 
 /* Removed abstract concentric circles */
@@ -1124,8 +1120,8 @@ button {
 .glass-card:hover,
 [data-hover="true"]:hover {
   transform: translateY(-4px) !important;
-  border-color: rgba(0, 255, 171, 0.30) !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 171, 0.08) !important;
+  border-color: rgba(255, 107, 44, 0.30) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 107, 44, 0.08) !important;
 }
 
 /* Clean Hover States */
@@ -1135,15 +1131,15 @@ button {
 .pod-momentum:hover,
 [data-hover="true"]:hover {
   transform: translateY(-5px) !important;
-  border-color: rgba(0, 255, 171, 0.25) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 171, 0.07) !important;
+  border-color: rgba(255, 107, 44, 0.25) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 107, 44, 0.07) !important;
 }
 
 /* Interactive Input Focus Highlights */
 input:focus,
 textarea:focus {
   border-color: var(--accent) !important;
-  box-shadow: 0 0 0 3px rgba(0, 255, 171, 0.12) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 44, 0.12) !important;
 }
 
 
@@ -2989,7 +2985,7 @@ div[style*="padding: 0 24px 24px"] {
 }
 
 .hologram-stamp::after {
-  content: "NEXUS\aSECURED";
+  content: "SHIVANSH\aSECURED";
   white-space: pre-wrap;
   text-align: center;
   line-height: 1.4;

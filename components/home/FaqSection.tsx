@@ -89,27 +89,27 @@ export default function FaqSection() {
           {[
             {
               q: "How long does a typical project take?",
-              a: "A basic landing page or MVP website is typically ready in 7-14 days. A full product with AI integrations or mobile apps takes 4-8 weeks depending on scope. We always define a clear timeline upfront in the project brief."
+              a: "A landing page or simple web app is typically ready in 7-14 days. A full product with backend, mobile app, or AI integrations takes 4-8 weeks depending on scope. I always define a clear timeline upfront before any work begins."
             },
             {
-              q: "Do you require full payment upfront?",
-              a: "No. We work on a 50% upfront / 50% on delivery model for most projects. For larger projects, we split into 3 milestones. We never ask for 100% upfront."
+              q: "How do you charge for projects?",
+              a: "I offer both fixed-price and hourly engagement models. For most projects, I work on a 50% upfront / 50% on delivery split. For larger builds, we break it into 3 milestones. I never ask for 100% payment upfront."
             },
             {
-              q: "Can you work with clients outside Bhopal / India?",
-              a: "Absolutely. We have worked with clients remotely across India and internationally. All communication happens via WhatsApp, Google Meet, and our project dashboard."
+              q: "Can you work with clients outside India?",
+              a: "Yes, absolutely. I work remotely with clients worldwide. All communication happens over WhatsApp, Google Meet, and email. Timezone differences are manageable — I'm flexible with scheduling."
             },
             {
-              q: "Do you provide ongoing maintenance after launch?",
-              a: "Yes. All projects include 30 days of free post-launch support. Extended maintenance plans are available starting from ₹3,000/month."
+              q: "Do you provide support after delivery?",
+              a: "All projects include 15-30 days of free post-launch support for bug fixes. Extended maintenance is available on a monthly retainer basis. I don&apos;t disappear after delivery."
             },
             {
-              q: "What if I have only a rough idea and no technical knowledge?",
-              a: "That's perfectly fine — most of our clients come with ideas, not specs. We handle the full discovery, planning, design, and development process. You just need to communicate your business goals."
+              q: "What if I have just an idea and no technical knowledge?",
+              a: "That&apos;s completely fine — most of my clients come with business ideas, not technical specs. I handle discovery, planning, design, and development. You just need to share your vision and goals."
             },
             {
               q: "Do you sign NDAs and contracts?",
-              a: "Yes. We sign NDAs and provide a simple project agreement before any work begins. Your idea and codebase remain fully protected and owned by you after delivery."
+              a: "Yes. I sign NDAs and provide a simple project agreement before any work begins. Your idea, code, and intellectual property are fully protected and owned by you upon final delivery."
             },
           ].map((faq, idx) => (
             <FaqItem key={idx} question={faq.q} answer={faq.a} />

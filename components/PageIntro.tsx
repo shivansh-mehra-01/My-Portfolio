@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import NexusLogo from "./NexusLogo";
+import SMMonogram from "./NexusLogo";
 
 export default function PageIntro() {
   const [visible, setVisible] = useState(true);
@@ -19,11 +19,11 @@ export default function PageIntro() {
       <div className="intro-panel intro-panel-bottom" />
       <div className="intro-core">
         <div className="intro-mark">
-          <NexusLogo size={42} style={{ marginRight: 0 }} />
+          <SMMonogram size={42} style={{ marginRight: 0 }} />
         </div>
         <div className="intro-wordmark">
-          <span>Team</span>
-          <strong>Nexus</strong>
+          <span>Shivansh</span>
+          <strong>.dev</strong>
         </div>
         <div className="intro-line">
           <span />

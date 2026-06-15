@@ -20,7 +20,7 @@ export default function SalesVisual() {
       <div className={styles.commandPanel}>
         <div className={styles.panelHeader}>
           <div>
-            <span className={styles.kicker}>NEXUS OS</span>
+            <span className={styles.kicker}>SHIVANSH OS</span>
             <h3>Product Command Center</h3>
           </div>
           <div className={styles.liveBadge}>

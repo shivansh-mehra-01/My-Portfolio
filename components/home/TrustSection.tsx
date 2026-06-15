@@ -43,33 +43,33 @@ export default function TrustSection() {
       id: 1,
       icon: <Trophy size={28} strokeWidth={1.5} />, 
       title: "Hackathons",
-      value: <><AnimatedCounter value={2} />x National Wins</>, 
-      desc: "Top awards for systems architecture & AI inference.",
-      colorRGB: "0, 229, 255" // Cyan
+      value: <><AnimatedCounter value={3} />× Winner</>, 
+      desc: "Won 3 hackathons at college & state/national levels — delivering real solutions under pressure.",
+      colorRGB: "255, 107, 44" // Orange
     },
     { 
       id: 2,
       icon: <Sparkles size={28} strokeWidth={1.5} />, 
-      title: "Deployments",
-      value: "Production-Grade", 
-      desc: "Multiple real-world projects scaling active users.",
-      colorRGB: "255, 0, 127" // Pink
+      title: "Projects Shipped",
+      value: "10+ Projects", 
+      desc: "Full-stack web apps, cross-platform mobile apps, and AI-integrated systems delivered end-to-end.",
+      colorRGB: "255, 184, 0" // Gold
     },
     { 
       id: 3,
       icon: <Cpu size={28} strokeWidth={1.5} />, 
-      title: "Engineering",
-      value: "Full Stack + AI Pods", 
-      desc: "Specialists in robust software & infrastructure.",
-      colorRGB: "255, 214, 0" // Yellow
+      title: "Tech Coverage",
+      value: "Web + Mobile + AI", 
+      desc: "Versatile across the full stack — React, Node, Python, React Native, and LLM integrations.",
+      colorRGB: "255, 107, 44" // Orange
     },
     { 
       id: 4,
       icon: <Layers size={28} strokeWidth={1.5} />, 
-      title: "Ecosystems",
-      value: "Web + Mobile + AI", 
-      desc: "Cross-platform solutions built for business gravity.",
-      colorRGB: "0, 230, 118" // Green
+      title: "Background",
+      value: "CS Undergraduate", 
+      desc: "Strong foundation in DSA, algorithms, and systems — sharpened through Java and real-world builds.",
+      colorRGB: "255, 184, 0" // Gold
     },
   ];
 
@@ -128,10 +128,10 @@ export default function TrustSection() {
               letterSpacing: "-0.02em"
             }}
           >
-            Built for <span className="font-serif-i" style={{ color: "var(--accent)" }}>Scale</span> & Impact
+            By the <span className="font-serif-i" style={{ color: "var(--accent)" }}>Numbers</span>
           </h2>
           <p style={{ color: "var(--muted)", fontSize: "1.05rem", maxWidth: "600px", margin: "0 auto" }}>
-            The numbers and engineering standards that define the Nexus ecosystem.
+            A snapshot of what I&apos;ve built, won, and shipped as a freelance developer.
           </p>
         </div>
 

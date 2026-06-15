@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
-  title: 'Terms of Service | NEXUS',
-  description: 'Terms of Service for NEXUS.',
+  title: 'Terms of Service | Shivansh Mehra',
+  description: 'Terms of Service for Shivansh Mehra.',
 };
 
 export default function TermsOfServicePage() {
@@ -33,12 +33,12 @@ export default function TermsOfServicePage() {
         <div style={{ color: "rgba(255,255,255,0.8)", lineHeight: "1.8", fontSize: "1.05rem", display: "flex", flexDirection: "column", gap: "30px" }}>
           <section>
             <h2 style={{ color: "var(--foreground)", fontSize: "1.5rem", marginBottom: "16px", fontFamily: "var(--font-space-grotesk), sans-serif" }}>1. Acceptance of Terms</h2>
-            <p>By accessing and using our website or hiring NEXUS for development services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.</p>
+            <p>By accessing and using our website or hiring Shivansh Mehra for development services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.</p>
           </section>
 
           <section>
             <h2 style={{ color: "var(--foreground)", fontSize: "1.5rem", marginBottom: "16px", fontFamily: "var(--font-space-grotesk), sans-serif" }}>2. Services Provided</h2>
-            <p>NEXUS provides custom software development, web design, mobile app development, and AI integration services. Project scopes, timelines, and deliverables are defined individually in project contracts.</p>
+            <p>Shivansh Mehra provides custom software development, web design, mobile app development, and AI integration services. Project scopes, timelines, and deliverables are defined individually in project contracts.</p>
           </section>
 
           <section>
@@ -48,7 +48,7 @@ export default function TermsOfServicePage() {
 
           <section>
             <h2 style={{ color: "var(--foreground)", fontSize: "1.5rem", marginBottom: "16px", fontFamily: "var(--font-space-grotesk), sans-serif" }}>4. Limitation of Liability</h2>
-            <p>NEXUS shall not be liable for any indirect, incidental, or consequential damages arising out of the use or inability to use our services or deliverables.</p>
+            <p>Shivansh Mehra shall not be liable for any indirect, incidental, or consequential damages arising out of the use or inability to use our services or deliverables.</p>
           </section>
         </div>
       </div>

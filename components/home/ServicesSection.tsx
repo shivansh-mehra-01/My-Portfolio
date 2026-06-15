@@ -223,7 +223,7 @@ export default function ServicesSection() {
     },
     {
       title: "Startup MVPs",
-      desc: "Rapid product cycles targeting proof-of-concept validations. We launch polished Minimum Viable Products in weeks, not months.",
+      desc: "Rapid product cycles targeting proof-of-concept validations. I launch polished Minimum Viable Products in weeks, not months.",
       badge: "Fast-Track Launch",
       glow: "rgba(255, 0, 127, 0.15)",
       colorRGB: "255, 0, 127",
@@ -268,10 +268,10 @@ export default function ServicesSection() {
               letterSpacing: "-0.03em"
             }}
           >
-            What We <span className="font-serif-i" style={{ color: "var(--accent)" }}>Do</span>
+            What I <span className="font-serif-i" style={{ color: "var(--accent)" }}>Do</span>
           </h2>
           <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: "1.6", maxWidth: "650px", margin: "0 auto" }}>
-            We build fast, scalable digital products designed to drive business efficiency and customer trust.
+            I build fast, scalable digital products designed to drive business efficiency and customer trust.
           </p>
         </div>
 

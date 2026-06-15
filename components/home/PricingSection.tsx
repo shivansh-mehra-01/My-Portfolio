@@ -56,7 +56,7 @@ export default function PricingSection() {
               price: "Custom",
               suffix: "quote",
               desc: "Large-scale systems, SaaS platforms, or ongoing product partnerships. Let's discuss.",
-              features: ["Unlimited scope", "Dedicated dev pod", "Custom AI systems", "Priority SLA uptime", "Ongoing maintenance contract"],
+              features: ["Unlimited scope", "Direct developer access", "Custom AI systems", "Priority SLA uptime", "Ongoing maintenance contract"],
               cta: "Let's Talk",
               highlight: false,
               color: "#00e5ff",
@@ -66,16 +66,16 @@ export default function PricingSection() {
               key={idx}
               style={{
                 background: plan.highlight
-                  ? "linear-gradient(135deg, rgba(0, 255, 171, 0.05) 0%, var(--surface-1) 100%)"
+                  ? "linear-gradient(135deg, rgba(255, 107, 44, 0.05) 0%, var(--surface-1) 100%)"
                   : "var(--card-bg)",
                 border: plan.highlight
-                  ? "1px solid rgba(0, 255, 171, 0.35)"
+                  ? "1px solid rgba(255, 107, 44, 0.35)"
                   : "1px solid var(--card-border)",
                 borderRadius: "20px",
                 padding: "36px",
                 position: "relative",
                 boxShadow: plan.highlight
-                  ? "0 18px 46px rgba(0, 255, 171, 0.12), 0 0 0 1px rgba(0, 255, 171, 0.05)"
+                  ? "0 18px 46px rgba(255, 107, 44, 0.12), 0 0 0 1px rgba(255, 107, 44, 0.05)"
                   : "var(--card-shadow)",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 backdropFilter: "blur(12px)",

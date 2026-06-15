@@ -96,7 +96,7 @@ export default function TechMarquee() {
       padding: "80px 0",
       position: "relative",
       zIndex: 2,
-      background: "radial-gradient(ellipse at center, rgba(0, 229, 255, 0.04) 0%, transparent 60%)",
+      background: "radial-gradient(ellipse at center, rgba(255, 107, 44, 0.04) 0%, transparent 60%)",
       borderTop: "1px solid rgba(255,255,255,0.03)",
       borderBottom: "1px solid rgba(255,255,255,0.03)",
       overflow: "hidden"
@@ -127,7 +127,7 @@ export default function TechMarquee() {
           textTransform: "uppercase"
         }}>
           <span style={{ width: "60px", height: "2px", background: "linear-gradient(90deg, transparent, var(--accent))" }} />
-          Powered by Modern Tech
+          My Tech Stack
           <span style={{ width: "60px", height: "2px", background: "linear-gradient(-90deg, transparent, var(--teal))" }} />
         </h3>
       </div>

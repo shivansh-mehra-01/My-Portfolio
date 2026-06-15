@@ -166,8 +166,8 @@ export default function Works() {
       type: "project",
       id: "nexus-room",
       code: "PRJ-01",
-      title: "Nexus Launch Command Room",
-      subtitle: "Centralized operational war room & system metrics",
+      title: "Real-Time Launch Dashboard",
+      subtitle: "Centralized launch ops dashboard & system metrics",
       desc: "A dashboard checking active client marketing beats, schedules, owner tasks, and live telemetry drift.",
       details: "Built for fast-scaling startups and co-marketing groups. Hooks direct analytics flows into client databases, checking asset approvals, partner marketing timelines, and live traffic metrics to prevent coordination issues.",
       tags: ["Launch Ops", "Dashboards", "FastAPI"],
@@ -192,7 +192,7 @@ export default function Works() {
       subtitle: "Organized by Technocrats Institute of Technology & Science, Bhopal | First Prize Winner",
       desc: (
         <span>
-          Out of <strong style={{ color: "#ffffff" }}>200+ competing teams</strong> and innovators across multiple institutions, NEXUS secured the <strong style={{ color: "var(--accent)" }}>1st Prize (₹20,000)</strong> at the prestigious Technocrats Innovation Challenge 2K26.
+          Out of <strong style={{ color: "#ffffff" }}>200+ competing teams</strong> and innovators across multiple institutions, my team secured the <strong style={{ color: "var(--accent)" }}>1st Prize (₹20,000)</strong> at the prestigious Technocrats Innovation Challenge 2K26.
         </span>
       ),
       details: (
@@ -257,7 +257,7 @@ export default function Works() {
       subtitle: "Organized by Bansal Group of Institutes & MPSEDC | National Runner-Up",
       desc: (
         <span>
-          Competing against <strong style={{ color: "#ffffff" }}>600+ teams</strong> and over <strong style={{ color: "#ffffff" }}>2,800 participants</strong> from across India, NEXUS secured the <strong style={{ color: "#00e5ff" }}>Runner-Up Position (₹12,000)</strong> at the prestigious BGI Hackathon 2026 held in Bhopal.
+          Competing against <strong style={{ color: "#ffffff" }}>600+ teams</strong> and over <strong style={{ color: "#ffffff" }}>2,800 participants</strong> from across India, my team secured the <strong style={{ color: "#00e5ff" }}>Runner-Up Position (₹12,000)</strong> at the prestigious BGI Hackathon 2026 held in Bhopal.
         </span>
       ),
       details: (
@@ -374,7 +374,7 @@ export default function Works() {
   return (
     <div style={{ background: "var(--background)", minHeight: "100vh", position: "relative" }}>
       {/* GLOBAL BACKGROUND ELEMENTS */}
-      <div className="bg-glow" style={{ top: "-10%", left: "-10%", background: "radial-gradient(circle, rgba(0,255,171,0.08) 0%, transparent 60%)" }} />
+      <div className="bg-glow" style={{ top: "-10%", left: "-10%", background: "radial-gradient(circle, rgba(255,184,0,0.08) 0%, transparent 60%)" }} />
       <div className="bg-glow" style={{ bottom: "-10%", right: "-10%", background: "radial-gradient(circle, rgba(255,92,43,0.05) 0%, transparent 60%)" }} />
 
       <div style={{ paddingTop: "140px", paddingBottom: "100px" }}>
@@ -399,7 +399,7 @@ export default function Works() {
             Engineering <span className="font-serif-i" style={{ color: "var(--accent)" }}>Archives</span>
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: "1.6", maxWidth: "650px", margin: "0 auto" }}>
-            A curated index of our production systems, software deployments, and award-winning national hackathon championships.
+            A curated index of my production systems, software deployments, and award-winning national hackathon championships.
           </p>
         </div>
 
@@ -822,7 +822,7 @@ export default function Works() {
                   className="btn-inverted"
                   onClick={() => setActiveProject(null)}
                 >
-                  {registryItems[activeProject].type === "project" ? "Deploy Similar AI System" : "Partner With NEXUS"}
+                  {registryItems[activeProject].type === "project" ? "Deploy Similar AI System" : "Let's Work Together"}
                 </Link>
               </div>
             </>

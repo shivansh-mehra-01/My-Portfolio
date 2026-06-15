@@ -25,7 +25,7 @@ const videos = [
   },
   {
     src: "/images/dashboard_demo.mp4",
-    title: "nexus-command-dashboard.mp4",
+    title: "command-dashboard.mp4",
     colorRGB: "255, 0, 127", // Pink/Magenta
     badgeLeft: "Command Room",
     badgeRight: "live-telemetry.go",

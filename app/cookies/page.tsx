@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
-  title: 'Cookie Policy | NEXUS',
-  description: 'Cookie Policy for NEXUS.',
+  title: 'Cookie Policy | Shivansh Mehra',
+  description: 'Cookie Policy for Shivansh Mehra.',
 };
 
 export default function CookiePolicyPage() {

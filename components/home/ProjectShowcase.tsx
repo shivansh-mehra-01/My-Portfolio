@@ -98,7 +98,7 @@ export default function ProjectShowcase() {
             Featured Systems <span className="font-serif-i" style={{ color: "var(--accent)" }}>Deployed</span>
           </h2>
           <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: "1.6" }}>
-            Explore how we translate business briefs into high-impact digital systems.
+            Explore how I translate business briefs into high-impact digital systems.
           </p>
         </div>
 
@@ -108,8 +108,8 @@ export default function ProjectShowcase() {
             {
               id: "nexus-room",
               code: "PRJ-01",
-              title: "Nexus Command Room",
-              subtitle: "Centralized operational war room",
+              title: "Real-Time Launch Dashboard",
+              subtitle: "Centralized launch ops dashboard",
               colorRGB: "232, 96, 46",
               color: "#e8602e",
               img: "/images/custom-project-1.png",

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
-  title: 'Privacy Policy | NEXUS',
-  description: 'Privacy Policy for NEXUS.',
+  title: 'Privacy Policy | Shivansh Mehra',
+  description: 'Privacy Policy for Shivansh Mehra.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 style={{ color: "var(--foreground)", fontSize: "1.5rem", marginBottom: "16px", fontFamily: "var(--font-space-grotesk), sans-serif" }}>4. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at <strong>build@nexus.ac.in</strong>.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at <strong>mehrashiv8889@gmail.com</strong>.</p>
           </section>
         </div>
       </div>

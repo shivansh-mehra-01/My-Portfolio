@@ -3,6 +3,26 @@
 import { useState, useEffect } from "react";
 import { Send, Terminal as TerminalIcon, Phone, Mail, MapPin, ArrowLeft, ArrowRight, Check, Sparkles, Cpu, Layers, Smartphone } from "lucide-react";
 
+function GithubIcon({ size = 16, style }: { size?: number; style?: React.CSSProperties }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={style}
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+}
+
 function LinkedinIcon({ size = 16, style }: { size?: number; style?: React.CSSProperties }) {
   return (
     <svg
@@ -111,7 +131,7 @@ export default function Contact() {
           email: formData.email,
           project_type: formData.project,
           message: formData.message,
-          subject: "New Project Inquiry from NEXUS Website",
+          subject: "New Project Inquiry from Shivansh Mehra Portfolio",
         }),
       });
 
@@ -119,7 +139,7 @@ export default function Contact() {
 
       if (result.success) {
         // Generate secure boarding pass info
-        const tId = "NXS-" + Math.random().toString(36).substring(2, 9).toUpperCase();
+        const tId = "SM-" + Math.random().toString(36).substring(2, 9).toUpperCase();
         const current = new Date().toLocaleString("en-US", {
           month: "short",
           day: "2-digit",
@@ -208,7 +228,7 @@ export default function Contact() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
             }}
           >
-            Tell us about your startup concept or local business system requirements. Book a call to align on MVP timeline options and exact deliverables.
+            Tell me about your project or startup concept. Let's align on details, timeline, and deliverables.
           </p>
 
           {/* Premium Glassmorphic System Telemetry Card */}
@@ -231,16 +251,16 @@ export default function Contact() {
               left: "-50%",
               width: "200%",
               height: "200%",
-              background: "radial-gradient(circle at top right, rgba(0, 229, 255, 0.1) 0%, transparent 50%)",
+              background: "radial-gradient(circle at top right, rgba(255, 107, 44, 0.1) 0%, transparent 50%)",
               pointerEvents: "none"
             }} />
 
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid rgba(255,255,255,0.1)`, paddingBottom: "20px", marginBottom: "20px", position: "relative", zIndex: 1 }}>
-              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.8rem", color: "#00E5FF", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
+              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.8rem", color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
                 System Telemetry
               </span>
-              <span style={{ color: "#00FFAB", display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", fontWeight: 700, background: "rgba(0, 255, 171, 0.1)", padding: "4px 12px", borderRadius: "100px", border: "1px solid rgba(0, 255, 171, 0.2)" }}>
-                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#00FFAB", boxShadow: `0 0 10px #00FFAB`, animation: "pulse 2s infinite" }} />
+              <span style={{ color: "var(--teal)", display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", fontWeight: 700, background: "rgba(255, 184, 0, 0.1)", padding: "4px 12px", borderRadius: "100px", border: "1px solid rgba(255, 184, 0, 0.2)" }}>
+                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--teal)", boxShadow: `0 0 10px var(--teal)`, animation: "pulse 2s infinite" }} />
                 ONLINE
               </span>
             </div>
@@ -248,7 +268,7 @@ export default function Contact() {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px", position: "relative", zIndex: 1 }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>Response SLA</span>
-                <span style={{ color: "#00FFAB", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>&lt; 24 Hours</span>
+                <span style={{ color: "var(--teal)", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>&lt; 24 Hours</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>Sprint Load</span>
@@ -274,10 +294,10 @@ export default function Contact() {
             }}
           >
             {[
-              { icon: <Phone size={18} />, link: "https://wa.me/919999999999?text=Hello", color: greenAccent },
-              { icon: <Mail size={18} />, link: "mailto:build@nexus.ac.in", color: greenAccent },
-              { icon: <LinkedinIcon size={18} />, link: "https://www.linkedin.com/in/shivam-kumar-maurya-000370251/", color: "#cbd5e1" },
-              { icon: <InstagramIcon size={18} />, link: "https://www.instagram.com/mauryashivamkumar841/", color: "#cbd5e1" },
+              { icon: <Phone size={18} />, link: "https://wa.me/919303164688?text=Hello", color: greenAccent },
+              { icon: <Mail size={18} />, link: "mailto:mehrashiv8889@gmail.com", color: greenAccent },
+              { icon: <LinkedinIcon size={18} />, link: "https://linkedin.com/in/shivanshmehra01", color: "#cbd5e1" },
+              { icon: <GithubIcon size={18} />, link: "https://github.com/shivansh-mehra-01", color: "#cbd5e1" },
             ].map((item, idx) => (
               <a
                 key={idx}
@@ -472,7 +492,7 @@ export default function Contact() {
               {step === 3 && (
                 <form onSubmit={handleFormSubmit} style={{ display: "flex", flexDirection: "column", gap: "28px", flex: 1 }}>
                   <h3 style={{ fontSize: "1.25rem", color: "#ffffff", fontWeight: 700, margin: 0, fontFamily: "var(--font-space-grotesk), sans-serif" }}>
-                    Share your vision with our developers:
+                    Share your vision with me:
                   </h3>
                   <div className="contact-input-wrapper">
                     <label>Project Brief details</label>
@@ -551,7 +571,7 @@ export default function Contact() {
               {/* Ticket header */}
               <div style={{ borderBottom: `1px solid ${borderSoft}`, paddingBottom: "20px", marginBottom: "24px" }}>
                 <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.62rem", color: greenAccent, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "4px" }}>
-                  Nexus Project System brief
+                  Project System Brief
                 </span>
                 <h3 style={{ margin: 0, fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: "1.40rem", fontWeight: 800, color: "#ffffff" }}>
                   BOARDING PASS
@@ -615,14 +635,14 @@ export default function Contact() {
                     ✓ active queue slot secured
                   </span>
                   <p style={{ color: "#8fa1b3", fontSize: "0.78rem", lineHeight: "1.45", margin: 0, maxWidth: "300px" }}>
-                    NDA compliance registered. Our engineers will establish sync within 24 hours.
+                    NDA compliance registered. I will establish sync within 24 hours.
                   </p>
                 </div>
 
                 {/* Simulated Barcode */}
                 <div className="ticket-barcode" style={{ width: "100%", height: "40px", background: `repeating-linear-gradient(90deg, #64748b, #64748b 2px, transparent 2px, transparent 6px, #64748b 6px, #64748b 8px, transparent 8px, transparent 12px)`, opacity: 0.5, marginBottom: "8px" }} />
                 <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", letterSpacing: "0.3em", color: "#64748b" }}>
-                  *NEXUS-SHIPPING*
+                  *SHIVANSH-MEHRA-PORTFOLIO*
                 </span>
 
                 {/* Reset button to submit a new brief */}

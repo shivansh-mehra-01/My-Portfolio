@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
             <div className="bento-manifesto-content">
               <span className="eyebrow-mono" style={{ color: "var(--accent)", marginBottom: "16px", display: "inline-block" }}>
                 <span className="pulsing-dot pulsing-dot-coral" />
-                The Nexus Commitment
+                Why Hire Me
               </span>
               <h2
                 className="font-display"
@@ -96,14 +96,27 @@ export default function WhyChooseUs() {
                   lineHeight: 1.15
                 }}
               >
-                We build <span className="font-serif-i" style={{ color: "var(--accent)" }}>tools</span>,<br />not tech homework.
+                I build <span className="font-serif-i" style={{ color: "var(--accent)" }}>products</span>,<br />not just code.
               </h2>
               <p style={{ color: "var(--muted)", fontSize: "1.1rem", lineHeight: "1.6", margin: 0, maxWidth: "600px" }}>
-                We are not freelancers working in silos. NEXUS is an agile product development partner. We focus on business outcomes, clear contracts, and rapid deployments that increase your revenue and trust.
+                As a solo developer, you get direct access to the person actually building your product — no middlemen, no miscommunication. I combine fast execution, technical depth, and a genuine commitment to your goals.
               </p>
             </div>
-            <div className="bento-manifesto-asset" style={{ position: "relative", minHeight: "250px" }}>
-              <Image src="/images/char-team.png" className="manifesto-asset-img" alt="Nexus Team discussing a project" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "contain" }} />
+            <div className="bento-manifesto-asset" style={{ position: "relative", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div style={{
+                width: "220px",
+                height: "220px",
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, rgba(255,107,44,0.15), rgba(255,184,0,0.15))",
+                border: "1px solid rgba(255,107,44,0.25)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "5rem",
+                boxShadow: "0 0 60px rgba(255,107,44,0.15)"
+              }}>
+                👨‍💻
+              </div>
             </div>
           </div>
 
@@ -187,25 +200,25 @@ export default function WhyChooseUs() {
               >
                 {[
                   {
-                    title: "Rapid MVP Timelines",
-                    desc: "We define, build, and deploy functional MVPs in a matter of weeks.",
-                    color: "#00e5ff",
-                    bg: "rgba(0, 229, 255, 0.08)",
-                    border: "rgba(0, 229, 255, 0.2)",
+                    title: "Direct Communication",
+                    desc: "You talk directly to the developer building your product. No account managers, no delays.",
+                    color: "#FF6B2C",
+                    bg: "rgba(255, 107, 44, 0.08)",
+                    border: "rgba(255, 107, 44, 0.2)",
                   },
                   {
-                    title: "AI + Scalable Code",
-                    desc: "We hook automated LLM workflows directly into Next.js or mobile frames.",
-                    color: "#ffd600",
-                    bg: "rgba(255, 214, 0, 0.08)",
-                    border: "rgba(255, 214, 0, 0.2)",
+                    title: "Fast Turnaround",
+                    desc: "I deliver MVPs in 1-2 weeks. No bloated timelines or unnecessary meetings.",
+                    color: "#FFB800",
+                    bg: "rgba(255, 184, 0, 0.08)",
+                    border: "rgba(255, 184, 0, 0.2)",
                   },
                   {
-                    title: "Dedicated Product Pods",
-                    desc: "You deal directly with the engineers and designers building your system.",
-                    color: "#ff007f",
-                    bg: "rgba(255, 0, 127, 0.08)",
-                    border: "rgba(255, 0, 127, 0.2)",
+                    title: "Proven Under Pressure",
+                    desc: "3 hackathon wins prove I can think fast, build clean, and deliver on deadlines.",
+                    color: "#FF6B2C",
+                    bg: "rgba(255, 107, 44, 0.08)",
+                    border: "rgba(255, 107, 44, 0.2)",
                   },
                 ].map((p, idx) => (
                   <div
