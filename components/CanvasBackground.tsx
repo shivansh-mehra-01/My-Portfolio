@@ -46,8 +46,8 @@ export default function CanvasBackground() {
       {
         x: 0,
         y: 0,
-        radius: 550,
-        color: "rgba(255, 107, 44, 0.06)", // Warm Coral Orange
+        radius: 580,
+        color: "rgba(14, 165, 233, 0.07)", // Primary Sky Blue
         baseXRatio: 0.25,
         baseYRatio: 0.35,
         driftRadiusX: 0.15,
@@ -59,8 +59,8 @@ export default function CanvasBackground() {
       {
         x: 0,
         y: 0,
-        radius: 650,
-        color: "rgba(255, 184, 0, 0.04)", // Golden glow
+        radius: 680,
+        color: "rgba(56, 189, 248, 0.05)", // Soft Turquoise/Light Sky
         baseXRatio: 0.75,
         baseYRatio: 0.55,
         driftRadiusX: 0.12,
@@ -72,8 +72,8 @@ export default function CanvasBackground() {
       {
         x: 0,
         y: 0,
-        radius: 750,
-        color: "rgba(217, 119, 6, 0.035)", // Amber shadow
+        radius: 780,
+        color: "rgba(99, 102, 241, 0.04)", // Soft Indigo-Blue for sky depth
         baseXRatio: 0.5,
         baseYRatio: 0.45,
         driftRadiusX: 0.1,
@@ -88,7 +88,6 @@ export default function CanvasBackground() {
 
     const initStars = () => {
       stars.length = 0;
-      // Distribute stars across the entire screen
       const starCount = Math.floor((width * height) / 9000);
       for (let i = 0; i < starCount; i++) {
         stars.push({
@@ -115,8 +114,12 @@ export default function CanvasBackground() {
     };
 
     const drawBackground = () => {
-      // Very deep luxury dark obsidian base
-      ctx.fillStyle = "#040302";
+      // Extremely deep luxury space midnight blue base
+      const bg = ctx.createLinearGradient(0, 0, 0, height);
+      bg.addColorStop(0, "#010308");
+      bg.addColorStop(0.5, "#030816");
+      bg.addColorStop(1, "#061026");
+      ctx.fillStyle = bg;
       ctx.fillRect(0, 0, width, height);
     };
 
@@ -127,14 +130,14 @@ export default function CanvasBackground() {
         const alpha = star.alpha * twinkle;
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 248, 240, ${alpha})`;
+        ctx.fillStyle = `rgba(255, 250, 245, ${alpha})`;
         ctx.fill();
 
-        // Subtle orange bloom on main stars
+        // Subtle sky-blue bloom on main stars
         if (star.r > 1.0) {
           ctx.beginPath();
           ctx.arc(star.x, star.y, star.r * 2.8, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 107, 44, ${alpha * 0.06})`;
+          ctx.fillStyle = `rgba(56, 189, 248, ${alpha * 0.08})`;
           ctx.fill();
         }
       });
@@ -142,14 +145,12 @@ export default function CanvasBackground() {
 
     const drawAuroraBlobs = (time: number) => {
       blobs.forEach((blob) => {
-        // Organic organic drift using sine / cosine with customized speeds and phases
         const driftX = Math.sin(time * blob.speed + blob.phaseX) * (width * blob.driftRadiusX);
         const driftY = Math.cos(time * blob.speed + blob.phaseY) * (height * blob.driftRadiusY);
 
         const x = width * blob.baseXRatio + driftX;
         const y = height * blob.baseYRatio + driftY;
 
-        // Draw radial glow
         const glow = ctx.createRadialGradient(x, y, 0, x, y, blob.radius);
         glow.addColorStop(0, blob.color);
         glow.addColorStop(0.5, blob.color.replace(/[\d\.]+\)$/, "0.015)"));
@@ -172,8 +173,8 @@ export default function CanvasBackground() {
           spotX, spotY, 0,
           spotX, spotY, spotlightRadius
         );
-        spotGrad.addColorStop(0, "rgba(255, 184, 0, 0.045)"); // Subtle gold core
-        spotGrad.addColorStop(0.5, "rgba(255, 107, 44, 0.01)");  // Fading warm orange
+        spotGrad.addColorStop(0, "rgba(56, 189, 248, 0.05)"); // Soft sky blue core
+        spotGrad.addColorStop(0.5, "rgba(14, 165, 233, 0.01)");  // Fading blue glow
         spotGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
 
         ctx.fillStyle = spotGrad;
@@ -184,13 +185,12 @@ export default function CanvasBackground() {
     };
 
     const drawVignette = () => {
-      // Dark vignette overlay to frame the screen elements and ensure page contrast
       const vig = ctx.createRadialGradient(
         width / 2, height / 2, Math.min(width, height) * 0.45,
         width / 2, height / 2, Math.max(width, height) * 0.9
       );
-      vig.addColorStop(0, "rgba(4, 3, 2, 0)");
-      vig.addColorStop(1, "rgba(4, 3, 2, 0.75)");
+      vig.addColorStop(0, "rgba(1, 3, 8, 0)");
+      vig.addColorStop(1, "rgba(1, 3, 8, 0.8)");
       ctx.fillStyle = vig;
       ctx.fillRect(0, 0, width, height);
     };

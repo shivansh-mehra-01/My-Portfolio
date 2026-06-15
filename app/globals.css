@@ -1,30 +1,30 @@
 :root {
-  /* === BLACK / ORANGE / GOLD PALETTE — DARK MODE === */
-  --background: #09070200;
-  --surface-1: #111111;
-  --surface-2: #181818;
+  /* === DEEP SPACE / SKY BLUE PALETTE — DARK MODE === */
+  --background: #02040800;
+  --surface-1: #0b0f19;
+  --surface-2: #101726;
   --foreground: #FFFFFF;
 
-  /* Primary Accent — Vibrant Orange */
-  --accent: #FF6B2C;
-  --accent-rgb: 255, 107, 44;
-  --accent-muted: rgba(255, 107, 44, 0.10);
-  --accent-dark: #E05520;
+  /* Primary Accent — Sky Blue */
+  --accent: #0ea5e9;
+  --accent-rgb: 14, 165, 233;
+  --accent-muted: rgba(14, 165, 233, 0.08);
+  --accent-dark: #0284c7;
 
-  /* Secondary — Gold */
-  --teal: #FFB800;
-  --teal-rgb: 255, 184, 0;
+  /* Secondary — Light Sky / Soft Turquoise */
+  --teal: #38bdf8;
+  --teal-rgb: 56, 189, 248;
 
   /* Text Hierarchy */
-  --muted: #A0A0A0;
-  --muted-2: #6B6B6B;
+  --muted: #94a3b8;
+  --muted-2: #64748b;
 
   /* Card System */
-  --card-bg: rgba(255, 255, 255, 0.04);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(255, 107, 44, 0.40);
+  --card-bg: rgba(15, 23, 42, 0.4);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --card-border-hover: rgba(14, 165, 233, 0.25);
   --card-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
-  --glow-color: rgba(255, 107, 44, 0.15);
+  --glow-color: rgba(14, 165, 233, 0.08);
 
   /* Fonts */
   --font-manrope: var(--font-plus-jakarta-sans);
@@ -35,10 +35,10 @@
   --font-mono: var(--font-jetbrains-mono);
 
   /* Warm colors */
-  --cyber-cyan: #FFB800;
-  --cyber-green: #FF6B2C;
-  --cyber-purple: #FF6B2C;
-  --cyber-pink: #FFB800;
+  --cyber-cyan: #38bdf8;
+  --cyber-green: #0ea5e9;
+  --cyber-purple: #0ea5e9;
+  --cyber-pink: #38bdf8;
 }
 
 * {
@@ -51,7 +51,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #0a0704;
+  background: #020408;
   color: #FFFFFF;
   font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;

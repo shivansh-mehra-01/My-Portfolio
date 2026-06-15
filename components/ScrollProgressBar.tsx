@@ -31,9 +31,9 @@ export default function ScrollProgressBar() {
         left: 0, 
         height: "2.5px", 
         width: "0%", 
-        background: "linear-gradient(90deg, #FF6B2C, #FFB800, #FF6B2C)", 
+        background: "linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9)", 
         zIndex: 10001, 
-        boxShadow: "0 0 12px rgba(255, 107, 44, 0.5)", 
+        boxShadow: "0 0 12px rgba(14, 165, 233, 0.5)", 
         transition: "width 0.08s linear", 
         pointerEvents: "none" 
       }} 

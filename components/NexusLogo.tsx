@@ -17,8 +17,8 @@ export default function SMMonogram({ size = 34, style }: LogoProps) {
     >
       <defs>
         <linearGradient id="smGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FF6B2C" />
-          <stop offset="100%" stopColor="#FFB800" />
+          <stop offset="0%" stopColor="#0ea5e9" />
+          <stop offset="100%" stopColor="#38bdf8" />
         </linearGradient>
       </defs>
       <rect width="40" height="40" rx="10" fill="url(#smGrad)" opacity="0.15" />

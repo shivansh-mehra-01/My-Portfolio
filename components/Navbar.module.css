@@ -23,10 +23,10 @@
 .scrolled {
   padding-top: 14px;
   padding-bottom: 14px;
-  background: rgba(10, 7, 5, 0.85); /* Premium warm obsidian */
+  background: rgba(11, 15, 25, 0.85); /* Deep space obsidian */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 107, 44, 0.15); /* Orange-gold bottom border */
+  border-bottom: 1px solid rgba(14, 165, 233, 0.15); /* Sky blue bottom border */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
