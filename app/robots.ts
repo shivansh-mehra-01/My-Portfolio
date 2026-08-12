@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://shivanshmehra.dev/sitemap.xml',
+    sitemap: 'https://shivansh-portfolio.shivanshji.in/sitemap.xml',
   };
 }

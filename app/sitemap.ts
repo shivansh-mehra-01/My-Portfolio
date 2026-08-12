@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://shivanshmehra.dev';
+  const baseUrl = 'https://shivansh-portfolio.shivanshji.in';
 
   const staticRoutes = ['', '/about', '/services', '/works', '/contact'].map((route) => ({
     url: `${baseUrl}${route}`,
