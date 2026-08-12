@@ -26,13 +26,16 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shivanshmehra.dev"),
+  verification: {
+    google: "kwAyYOY7FUa6CQaOoLjAKJ97WtUaxZ_JdodPrWZ6Iao",
+  },
   title: "Shivansh Mehra — Web & Mobile Developer | Freelancer",
   description:
     "Shivansh Mehra is a full-stack & mobile developer specializing in React, Next.js, Node.js, React Native, and AI integrations. Available for freelance projects.",
   openGraph: {
     title: "Shivansh Mehra — Web & Mobile Developer",
     description:
-      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
+    "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
     url: "https://shivanshmehra.dev",
     siteName: "Shivansh Mehra",
     images: [
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shivansh Mehra — Web & Mobile Developer",
     description:
-      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
+    "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
     images: ["/og-image.jpg"],
   },
 };
