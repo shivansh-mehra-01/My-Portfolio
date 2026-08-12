@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shivanshmehra.dev"),
+  metadataBase: new URL("https://shivansh-portfolio.shivanshji.in"),
   verification: {
     google: "kwAyYOY7FUa6CQaOoLjAKJ97WtUaxZ_JdodPrWZ6Iao",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Shivansh Mehra — Web & Mobile Developer",
     description:
     "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
-    url: "https://shivanshmehra.dev",
+    url: "https://shivansh-portfolio.shivanshji.in",
     siteName: "Shivansh Mehra",
     images: [
       {
