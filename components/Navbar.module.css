@@ -23,15 +23,12 @@
 .scrolled {
   padding-top: 14px;
   padding-bottom: 14px;
-  background: rgba(11, 15, 25, 0.85); /* Deep space obsidian */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(14, 165, 233, 0.15); /* Sky blue bottom border */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: var(--background);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .header:hover {
-  border-bottom-color: rgba(255, 184, 0, 0.45); /* Shift glow bottom color to gold on hover */
+  border-bottom-color: var(--card-border-hover);
 }
 
 .logo {
@@ -56,13 +53,10 @@
   font-family: var(--font-space-grotesk), sans-serif;
   font-style: normal;
   font-weight: 800;
-  color: #0A0A0A;
+  color: var(--muted);
   text-transform: uppercase;
   font-size: 1.15rem;
   margin-left: 0px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .navLinks {
@@ -99,9 +93,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--teal));
-  border-radius: 99px;
-  box-shadow: 0 2px 10px rgba(255, 107, 44, 0.4);
+  background: var(--foreground);
 }
 
 .ctaBtn {
@@ -111,12 +103,11 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 8px 18px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px; /* Matching the 16px panel style */
-  color: #0A0A0C; /* High contrast dark text */
+  background: var(--foreground);
+  border: 1px solid var(--foreground);
+  border-radius: 4px;
+  color: var(--background);
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(255, 107, 44, 0.2);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   align-items: center;
@@ -126,10 +117,8 @@
 
 .ctaBtn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, var(--teal) 0%, var(--accent) 100%);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 25px rgba(255, 107, 44, 0.35);
-  color: #0A0A0C;
+  background: transparent;
+  color: var(--foreground);
 }
 
 /* Mobile Toggle */
@@ -160,8 +149,8 @@
     right: 0;
     height: 100vh;
     width: 280px;
-    background: rgba(10, 10, 10, 0.98);
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--background);
+    border-left: 1px solid var(--card-border);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -170,7 +159,6 @@
     visibility: hidden;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.4s;
     z-index: 1050;
-    backdrop-filter: blur(20px);
   }
 
   .navActive {

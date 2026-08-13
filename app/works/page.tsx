@@ -54,13 +54,14 @@ function WorksCardImage({ item, hovered }: WorksCardImageProps) {
   if (item.scrollingImages && item.scrollingImages.length > 1) {
     return (
       <>
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes scrollX-${item.id} {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-50% - 8px)); }
           }
         `}} />
-        <div 
+        <div
           style={{
             display: "flex",
             gap: "16px",
@@ -339,44 +340,10 @@ export default function Works() {
 
   const filteredItems = registryItems.filter((item) => filter === "all" || item.type === filter);
 
-  const handleTiltMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
 
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = -(y - centerY) / 25;
-    const rotateY = (x - centerX) / 25;
-
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-
-    // Light up background glow spotlight
-    const glow = card.querySelector(".bento-card-glow") as HTMLDivElement | null;
-    if (glow) {
-      glow.style.left = `${x}px`;
-      glow.style.top = `${y}px`;
-      glow.style.opacity = "1";
-    }
-  };
-
-  const handleTiltMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-
-    const glow = card.querySelector(".bento-card-glow") as HTMLDivElement | null;
-    if (glow) {
-      glow.style.opacity = "0";
-    }
-  };
 
   return (
     <div style={{ background: "var(--background)", minHeight: "100vh", position: "relative" }}>
-      {/* GLOBAL BACKGROUND ELEMENTS */}
-      <div className="bg-glow" style={{ top: "-10%", left: "-10%", background: "radial-gradient(circle, rgba(255,184,0,0.08) 0%, transparent 60%)" }} />
-      <div className="bg-glow" style={{ bottom: "-10%", right: "-10%", background: "radial-gradient(circle, rgba(255,92,43,0.05) 0%, transparent 60%)" }} />
-
       <div style={{ paddingTop: "140px", paddingBottom: "100px" }}>
 
         {/* HEADER SECTION */}
@@ -449,29 +416,9 @@ export default function Works() {
                 onMouseEnter={() => setHoveredCard(item.id)}
                 onMouseLeave={(e) => {
                   setHoveredCard(null);
-                  handleTiltMouseLeave(e);
                 }}
-                onMouseMove={handleTiltMouseMove}
                 onClick={() => setActiveProject(originalIndex)}
-                style={{
-                  "--card-theme": `rgba(${item.colorRGB}, 0.5)`
-                } as React.CSSProperties}
               >
-                {/* Glow Follower */}
-                <div
-                  className="bento-card-glow"
-                  style={{
-                    position: "absolute",
-                    width: "300px",
-                    height: "300px",
-                    background: `radial-gradient(circle, rgba(${item.colorRGB}, 0.15) 0%, transparent 70%)`,
-                    transform: "translate(-50%, -50%)",
-                    pointerEvents: "none",
-                    opacity: 0,
-                    transition: "opacity 0.3s ease",
-                    zIndex: 2
-                  }}
-                />
 
                 {/* Media Background */}
                 <div style={{ position: "absolute", inset: 0, zIndex: 1 }}>

@@ -44,32 +44,10 @@ export default function About() {
 
   return (
     <div style={{ background: "var(--background)", minHeight: "100vh", position: "relative" }}>
-      {/* Global Background Orbs */}
-      <div style={{
-        position: "absolute",
-        top: "10%",
-        left: "-10%",
-        width: "50vw",
-        height: "50vw",
-        background: "radial-gradient(circle, rgba(255, 107, 44, 0.06) 0%, transparent 60%)",
-        filter: "blur(100px)",
-        pointerEvents: "none",
-        zIndex: 0
-      }} />
-      <div style={{
-        position: "absolute",
-        bottom: "10%",
-        right: "-10%",
-        width: "50vw",
-        height: "50vw",
-        background: "radial-gradient(circle, rgba(255, 184, 0, 0.05) 0%, transparent 60%)",
-        filter: "blur(100px)",
-        pointerEvents: "none",
-        zIndex: 0
-      }} />
+
 
       <div style={{ paddingTop: "140px", paddingBottom: "100px", position: "relative", zIndex: 1 }}>
-        
+
         {/* Page Intro / Hero Header */}
         <div className="container" style={{ marginBottom: "80px" }}>
           <div style={{ maxWidth: "800px" }}>
@@ -89,11 +67,7 @@ export default function About() {
               }}
             >
               Full Stack Engineer &amp; <br />
-              <span style={{ 
-                background: "linear-gradient(90deg, var(--accent) 0%, var(--teal) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent"
-              }}>Hackathon Competitor</span>
+              <span style={{ color: "var(--foreground)" }}>Hackathon Competitor</span>
             </h1>
             <p style={{ color: "var(--foreground)", fontSize: "1.2rem", lineHeight: "1.7", marginBottom: "20px" }}>
               I construct clean, performant, and premium digital systems. Combining academic research in computer science with real-world freelance execution, I help founders and teams launch MVPs and scale products.
@@ -106,7 +80,7 @@ export default function About() {
 
         {/* Dynamic Bento Cards Section */}
         <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px", marginBottom: "80px" }}>
-          
+
           {/* Bento Card 1: Main Story */}
           <div style={{
             background: "var(--card-bg)",
@@ -144,10 +118,10 @@ export default function About() {
               <h3 style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "24px" }}>
                 Credentials &amp; Wins
               </h3>
-              
+
               <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                 <div style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-                  <div style={{ background: "rgba(255, 107, 44, 0.1)", border: "1px solid rgba(255, 107, 44, 0.2)", borderRadius: "10px", padding: "10px", color: "var(--accent)" }}>
+                  <div style={{ background: "transparent", border: "1px solid var(--card-border)", borderRadius: "10px", padding: "10px", color: "var(--foreground)" }}>
                     <Trophy size={20} />
                   </div>
                   <div>
@@ -157,7 +131,7 @@ export default function About() {
                 </div>
 
                 <div style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-                  <div style={{ background: "rgba(255, 184, 0, 0.1)", border: "1px solid rgba(255, 184, 0, 0.2)", borderRadius: "10px", padding: "10px", color: "var(--teal)" }}>
+                  <div style={{ background: "transparent", border: "1px solid var(--card-border)", borderRadius: "10px", padding: "10px", color: "var(--foreground)" }}>
                     <Trophy size={20} />
                   </div>
                   <div>
@@ -255,16 +229,15 @@ export default function About() {
                   width: "11px",
                   height: "11px",
                   borderRadius: "50%",
-                  background: "var(--accent)",
-                  boxShadow: "0 0 10px var(--accent)",
-                  border: "2px solid #090702"
+                  background: "var(--foreground)",
+                  border: "2px solid var(--background)"
                 }} />
-                
+
                 <span style={{
                   fontFamily: "var(--font-mono), monospace",
                   fontSize: "0.85rem",
                   fontWeight: 700,
-                  color: "var(--accent)",
+                  color: "var(--foreground)",
                   display: "block",
                   marginBottom: "4px"
                 }}>{mil.year}</span>
@@ -286,13 +259,11 @@ export default function About() {
         {/* Bottom CTA & Direct Channels */}
         <div className="container">
           <div style={{
-            background: "linear-gradient(135deg, rgba(255, 107, 44, 0.03) 0%, rgba(255, 184, 0, 0.03) 100%)",
-            border: "1px solid rgba(255, 107, 44, 0.2)",
+            background: "var(--card-bg)",
+            border: "1px solid var(--card-border)",
             borderRadius: "28px",
             padding: "60px 40px",
-            textAlign: "center",
-            boxShadow: "var(--card-shadow)",
-            backdropFilter: "blur(20px)"
+            textAlign: "center"
           }}>
             <h2 style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { Send } from "lucide-react";
-import SMMonogram from "./NexusLogo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -45,7 +44,6 @@ export default function Navbar() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <Link href="/" className={styles.logo} onClick={closeMenu}>
-        <SMMonogram size={34} style={{ marginRight: 0 }} />
         <span className={styles.logoText}>
           Shivansh<span className={styles.logoSerif}>.dev</span>
         </span>

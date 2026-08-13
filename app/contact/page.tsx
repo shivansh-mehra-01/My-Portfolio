@@ -231,57 +231,29 @@ export default function Contact() {
             Tell me about your project or startup concept. Let's align on details, timeline, and deliverables.
           </p>
 
-          {/* Premium Glassmorphic System Telemetry Card */}
+          {/* Minimal Availability Card */}
           <div style={{
             position: "relative",
-            background: "rgba(10, 10, 15, 0.4)",
-            border: `1px solid rgba(0, 229, 255, 0.2)`,
-            borderRadius: "24px",
+            background: "transparent",
+            border: `1px solid var(--card-border)`,
+            borderRadius: "16px",
             padding: "32px",
             marginBottom: "48px",
-            maxWidth: "480px",
-            backdropFilter: "blur(20px)",
-            boxShadow: "0 20px 40px rgba(0,0,0,0.5), inset 0 0 60px rgba(0, 229, 255, 0.05)",
-            overflow: "hidden"
+            maxWidth: "480px"
           }}>
-            {/* Glowing Background Orb */}
-            <div style={{
-              position: "absolute",
-              top: "-50%",
-              left: "-50%",
-              width: "200%",
-              height: "200%",
-              background: "radial-gradient(circle at top right, rgba(255, 107, 44, 0.1) 0%, transparent 50%)",
-              pointerEvents: "none"
-            }} />
-
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid rgba(255,255,255,0.1)`, paddingBottom: "20px", marginBottom: "20px", position: "relative", zIndex: 1 }}>
-              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.8rem", color: "var(--accent)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
-                System Telemetry
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid var(--card-border)`, paddingBottom: "20px", marginBottom: "20px" }}>
+              <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.8rem", color: "var(--foreground)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
+                Availability
               </span>
-              <span style={{ color: "var(--teal)", display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", fontWeight: 700, background: "rgba(255, 184, 0, 0.1)", padding: "4px 12px", borderRadius: "100px", border: "1px solid rgba(255, 184, 0, 0.2)" }}>
-                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--teal)", boxShadow: `0 0 10px var(--teal)`, animation: "pulse 2s infinite" }} />
-                ONLINE
+              <span style={{ color: "var(--foreground)", display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", fontWeight: 700 }}>
+                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--foreground)" }} />
+                ACCEPTING NEW PROJECTS
               </span>
             </div>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px", position: "relative", zIndex: 1 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>Response SLA</span>
-                <span style={{ color: "var(--teal)", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>&lt; 24 Hours</span>
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>Sprint Load</span>
-                <span style={{ color: "#ffffff", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>2 Slots Available</span>
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>NDAs</span>
-                <span style={{ color: "#00E5FF", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>Instant Signing</span>
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", fontFamily: "var(--font-space-grotesk), sans-serif" }}>Deployment Core</span>
-                <span style={{ color: "#ffffff", fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-mono), monospace" }}>Bhopal, IN</span>
-              </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+              <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: "1.6", margin: 0, fontFamily: "var(--font-space-grotesk), sans-serif" }}>
+                I am currently open for freelance opportunities and full-time roles. If you have an exciting project, let's discuss how I can help bring it to life.
+              </p>
             </div>
           </div>
 
@@ -563,122 +535,44 @@ export default function Contact() {
               )}
             </div>
           ) : (
-            /* Step 4: Holographic Digital Boarding Pass Ticket */
-            <div className="project-ticket" style={{ padding: "36px 32px", background: darkSurface, border: `1px solid ${greenAccent}`, borderRadius: "24px" }}>
-              {/* Holographic glowing stamp indicator */}
-              <div className="hologram-stamp" style={{ background: `linear-gradient(135deg, transparent 0%, rgba(0,230,118,0.15) 100%)` }} />
-
-              {/* Ticket header */}
-              <div style={{ borderBottom: `1px solid ${borderSoft}`, paddingBottom: "20px", marginBottom: "24px" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.62rem", color: greenAccent, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "4px" }}>
-                  Project System Brief
-                </span>
-                <h3 style={{ margin: 0, fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: "1.40rem", fontWeight: 800, color: "#ffffff" }}>
-                  BOARDING PASS
+            /* Step 4: Success Message */
+            <div style={{ padding: "40px", background: "transparent", border: `1px solid var(--card-border)`, borderRadius: "16px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "24px" }}>
+              <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: "var(--foreground)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--background)" }}>
+                <Check size={32} />
+              </div>
+              <div>
+                <h3 style={{ margin: "0 0 12px", fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: "1.5rem", fontWeight: 800, color: "#ffffff" }}>
+                  Message Received
                 </h3>
+                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: "1.6", margin: 0, maxWidth: "300px" }}>
+                  Thank you for reaching out. I'll review your project details and get back to you within 24 hours.
+                </p>
               </div>
-
-              {/* Pass contents metadata block */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                  <div>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
-                      CLIENT NAME
-                    </span>
-                    <span style={{ color: "#ffffff", fontWeight: 700, fontSize: "0.95rem", textTransform: "uppercase", fontFamily: "var(--font-space-grotesk), sans-serif" }}>
-                      {formData.name || "N/A"}
-                    </span>
-                  </div>
-                  <div>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
-                      SECTOR FOCUS
-                    </span>
-                    <span style={{ color: "#00e5ff", fontWeight: 700, fontSize: "0.95rem", textTransform: "uppercase", fontFamily: "var(--font-space-grotesk), sans-serif" }}>
-                      {formData.project || "N/A"}
-                    </span>
-                  </div>
-                </div>
-
-                <div>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
-                    PAYLOAD ROUTING (EMAIL)
-                  </span>
-                  <span style={{ color: "#ffffff", fontWeight: 600, fontSize: "0.9rem", fontFamily: "var(--font-mono), monospace" }}>
-                    {formData.email || "N/A"}
-                  </span>
-                </div>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                  <div>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
-                      TICKET HASH ID
-                    </span>
-                    <span style={{ color: greenAccent, fontWeight: 700, fontSize: "0.92rem", fontFamily: "var(--font-mono), monospace" }}>
-                      {ticketId}
-                    </span>
-                  </div>
-                  <div>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
-                      TIMESTAMP
-                    </span>
-                    <span style={{ color: "#ffffff", fontWeight: 500, fontSize: "0.75rem", fontFamily: "var(--font-mono), monospace" }}>
-                      {timestamp}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom ticket details */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", marginTop: "32px", paddingTop: "24px", borderTop: `1px dashed rgba(255,255,255,0.15)` }}>
-                <div style={{ textAlign: "center" }}>
-                  <span style={{ display: "inline-block", padding: "4px 10px", background: "rgba(37, 211, 102, 0.08)", border: "1px solid rgba(37, 211, 102, 0.2)", borderRadius: "99px", color: "#25d366", fontSize: "0.65rem", fontWeight: 700, fontFamily: "var(--font-mono), monospace", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
-                    ✓ active queue slot secured
-                  </span>
-                  <p style={{ color: "#8fa1b3", fontSize: "0.78rem", lineHeight: "1.45", margin: 0, maxWidth: "300px" }}>
-                    NDA compliance registered. I will establish sync within 24 hours.
-                  </p>
-                </div>
-
-                {/* Simulated Barcode */}
-                <div className="ticket-barcode" style={{ width: "100%", height: "40px", background: `repeating-linear-gradient(90deg, #64748b, #64748b 2px, transparent 2px, transparent 6px, #64748b 6px, #64748b 8px, transparent 8px, transparent 12px)`, opacity: 0.5, marginBottom: "8px" }} />
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.6rem", letterSpacing: "0.3em", color: "#64748b" }}>
-                  *SHIVANSH-MEHRA-PORTFOLIO*
-                </span>
-
-                {/* Reset button to submit a new brief */}
-                <button
-                  onClick={() => {
-                    setFormData({ name: "", email: "", project: "", message: "" });
-                    setTicketId("");
-                    setTimestamp("");
-                    setIsSubmitted(false);
-                    setStep(1);
-                  }}
-                  style={{
-                    background: "rgba(255, 255, 255, 0.02)",
-                    border: `1px solid ${borderSoft}`,
-                    color: "#ffffff",
-                    padding: "10px 24px",
-                    borderRadius: "24px",
-                    fontSize: "0.75rem",
-                    fontFamily: "var(--font-mono), monospace",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
-                    marginTop: "16px",
-                    width: "100%",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(0, 230, 118, 0.08)";
-                    e.currentTarget.style.borderColor = greenAccent;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";
-                    e.currentTarget.style.borderColor = borderSoft;
-                  }}
-                >
-                  &lt; New Project Brief / Reset &gt;
-                </button>
-              </div>
+              <button
+                onClick={() => {
+                  setFormData({ name: "", email: "", project: "", message: "" });
+                  setTicketId("");
+                  setTimestamp("");
+                  setIsSubmitted(false);
+                  setStep(1);
+                }}
+                style={{
+                  background: "transparent",
+                  border: `1px solid var(--card-border)`,
+                  color: "#ffffff",
+                  padding: "12px 28px",
+                  borderRadius: "8px",
+                  fontSize: "0.85rem",
+                  fontFamily: "var(--font-mono), monospace",
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                  marginTop: "16px",
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.borderColor = "var(--foreground)"}
+                onMouseLeave={(e) => e.currentTarget.style.borderColor = "var(--card-border)"}
+              >
+                Send Another Message
+              </button>
             </div>
           )}
         </div>

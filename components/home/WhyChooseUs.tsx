@@ -82,8 +82,7 @@ export default function WhyChooseUs() {
           {/* Top Row: Full Width Manifesto */}
           <div className="bento-manifesto-card">
             <div className="bento-manifesto-content">
-              <span className="eyebrow-mono" style={{ color: "var(--accent)", marginBottom: "16px", display: "inline-block" }}>
-                <span className="pulsing-dot pulsing-dot-coral" />
+              <span className="eyebrow-mono" style={{ color: "var(--muted)", marginBottom: "16px", display: "inline-block" }}>
                 Why Hire Me
               </span>
               <h2
@@ -106,14 +105,13 @@ export default function WhyChooseUs() {
               <div style={{
                 width: "220px",
                 height: "220px",
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, rgba(255,107,44,0.15), rgba(255,184,0,0.15))",
-                border: "1px solid rgba(255,107,44,0.25)",
+                borderRadius: "4px",
+                background: "var(--surface-2)",
+                border: "1px solid var(--card-border)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "5rem",
-                boxShadow: "0 0 60px rgba(255,107,44,0.15)"
               }}>
                 👨‍💻
               </div>
@@ -202,23 +200,14 @@ export default function WhyChooseUs() {
                   {
                     title: "Direct Communication",
                     desc: "You talk directly to the developer building your product. No account managers, no delays.",
-                    color: "#FF6B2C",
-                    bg: "rgba(255, 107, 44, 0.08)",
-                    border: "rgba(255, 107, 44, 0.2)",
                   },
                   {
                     title: "Fast Turnaround",
                     desc: "I deliver MVPs in 1-2 weeks. No bloated timelines or unnecessary meetings.",
-                    color: "#FFB800",
-                    bg: "rgba(255, 184, 0, 0.08)",
-                    border: "rgba(255, 184, 0, 0.2)",
                   },
                   {
                     title: "Proven Under Pressure",
                     desc: "3 hackathon wins prove I can think fast, build clean, and deliver on deadlines.",
-                    color: "#FF6B2C",
-                    bg: "rgba(255, 107, 44, 0.08)",
-                    border: "rgba(255, 107, 44, 0.2)",
                   },
                 ].map((p, idx) => (
                   <div
@@ -226,12 +215,12 @@ export default function WhyChooseUs() {
                     className={`bento-principle-item ${activePrinciple === idx ? "active" : ""}`}
                     onClick={() => setActivePrinciple(activePrinciple === idx ? null : idx)}
                     style={{
-                      "--item-hover-color": p.color,
                       border: "1px solid",
-                      borderColor: activePrinciple === idx ? p.border : "rgba(15, 23, 42, 0.04)",
-                      background: activePrinciple === idx ? p.bg : "rgba(15, 23, 42, 0.01)",
-                      boxShadow: activePrinciple === idx ? `0 8px 24px rgba(15, 23, 42, 0.08), 0 0 15px ${p.bg}` : "none",
+                      borderColor: activePrinciple === idx ? "var(--foreground)" : "transparent",
+                      background: activePrinciple === idx ? "var(--surface-2)" : "transparent",
                       cursor: "pointer",
+                      padding: "16px",
+                      borderRadius: "8px"
                     } as React.CSSProperties}
                   >
                     <div
@@ -242,9 +231,9 @@ export default function WhyChooseUs() {
                         width: "32px",
                         height: "32px",
                         borderRadius: "50%",
-                        background: activePrinciple === idx ? p.color : p.bg,
-                        border: `1px solid ${p.border}`,
-                        color: activePrinciple === idx ? "#000000" : p.color,
+                        background: activePrinciple === idx ? "var(--foreground)" : "var(--surface-2)",
+                        border: `1px solid var(--card-border)`,
+                        color: activePrinciple === idx ? "var(--background)" : "var(--foreground)",
                         flexShrink: 0,
                         fontSize: "0.85rem",
                         fontWeight: 900,

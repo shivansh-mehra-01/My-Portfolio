@@ -143,19 +143,7 @@ export default function Services() {
         overflow: "hidden"
       }}
     >
-      {/* Background Glows */}
-      <div style={{
-        position: "absolute",
-        top: "-10%",
-        left: "-10%",
-        width: "50%",
-        height: "50%",
-        background: `radial-gradient(circle, rgba(${activeSvcData.colorRGB}, 0.08) 0%, transparent 60%)`,
-        filter: "blur(80px)",
-        pointerEvents: "none",
-        zIndex: 0,
-        transition: "background 0.5s ease"
-      }} />
+
 
       {/* 1. HEADER */}
       <div
@@ -203,11 +191,7 @@ export default function Services() {
           }}
         >
           {activeTab === "capabilities" ? "Premium " : "Frequently "}
-          <span style={{ 
-            background: "linear-gradient(90deg, #00FFAB, #00E5FF)", 
-            WebkitBackgroundClip: "text", 
-            WebkitTextFillColor: "transparent"
-          }}>
+          <span style={{ color: "var(--foreground)" }}>
             {activeTab === "capabilities" ? "Services" : "Questions"}
           </span>
         </h1>
@@ -339,28 +323,16 @@ export default function Services() {
             <div
               key={activeService}
               style={{
-                background: "rgba(10, 10, 15, 0.6)",
-                border: `1px solid rgba(${activeSvcData.colorRGB}, 0.2)`,
+                background: "transparent",
+                border: `1px solid var(--card-border)`,
                 borderRadius: "24px",
                 padding: "48px",
-                backdropFilter: "blur(20px)",
                 position: "relative",
                 overflow: "hidden",
-                boxShadow: `0 20px 40px rgba(0,0,0,0.5), inset 0 0 80px rgba(${activeSvcData.colorRGB}, 0.05)`,
                 animation: "service-animate-fade 0.4s ease-out"
               }}
             >
-              {/* Internal Glow */}
-              <div style={{
-                position: "absolute",
-                top: 0,
-                right: 0,
-                width: "300px",
-                height: "300px",
-                background: `radial-gradient(circle, rgba(${activeSvcData.colorRGB}, 0.15) 0%, transparent 70%)`,
-                filter: "blur(40px)",
-                pointerEvents: "none"
-              }} />
+
 
               {/* Header */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: "24px", marginBottom: "32px", position: "relative", zIndex: 2 }}>
@@ -506,26 +478,14 @@ export default function Services() {
           }}>
             {/* FAQ Left Panel (Premium Glassmorphism) */}
             <div style={{
-              background: "rgba(10, 10, 15, 0.6)",
-              border: "1px solid rgba(0, 229, 255, 0.2)",
+              background: "transparent",
+              border: "1px solid var(--card-border)",
               borderRadius: "24px",
               padding: "40px 32px",
-              backdropFilter: "blur(20px)",
               position: "relative",
               overflow: "hidden",
-              boxShadow: "0 20px 40px rgba(0,0,0,0.5), inset 0 0 80px rgba(0, 229, 255, 0.05)"
             }}>
-              {/* Internal Glow */}
-              <div style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "250px",
-                height: "250px",
-                background: "radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, transparent 70%)",
-                filter: "blur(40px)",
-                pointerEvents: "none"
-              }} />
+
 
               <div style={{ position: "relative", zIndex: 2 }}>
                 <h3 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: "16px", fontFamily: "var(--font-space-grotesk)" }}>Knowledge Base</h3>
@@ -596,18 +556,7 @@ export default function Services() {
                     position: "relative"
                   }}
                 >
-                  {openFaq === idx && (
-                    <div style={{
-                      position: "absolute",
-                      top: "0",
-                      left: "0",
-                      width: "150px",
-                      height: "150px",
-                      background: "radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%)",
-                      filter: "blur(30px)",
-                      pointerEvents: "none"
-                    }} />
-                  )}
+
                   <button
                     onClick={() => toggleFaq(idx)}
                     style={{
