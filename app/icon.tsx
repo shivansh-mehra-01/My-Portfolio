@@ -2,6 +2,8 @@ import { ImageResponse } from 'next/og';
 import fs from 'fs';
 import path from 'path';
 
+export const dynamic = 'force-static';
+
 export const size = { width: 512, height: 512 };
 export const contentType = 'image/png';
 
