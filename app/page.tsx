@@ -2,6 +2,7 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import HeroSection from "@/components/home/HeroSection";
 import HackathonShowcase from "@/components/home/HackathonShowcase";
 import ProjectShowcase from "@/components/home/ProjectShowcase";
+import SkillSection from "@/components/home/SkillSection";
 import CtaSection from "@/components/home/CtaSection";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
 
       <HeroSection />
       <ProjectShowcase />
+      <SkillSection />
       <HackathonShowcase />
       <CtaSection />
     </div>
