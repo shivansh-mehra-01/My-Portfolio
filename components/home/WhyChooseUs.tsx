@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section ref={containerRef} className="section-padding" style={{ position: "relative", zIndex: 2 }}>
+    <section id="skills" ref={containerRef} className="section-padding" style={{ position: "relative", zIndex: 2 }}>
       <div className="container">
         <div className="bento-asymmetric-wrapper">
           {/* Top Row: Full Width Manifesto */}
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
                   lineHeight: 1.15
                 }}
               >
-                I build <span className="font-serif-i" style={{ color: "var(--accent)" }}>products</span>,<br />not just code.
+                Skills
               </h2>
               <p style={{ color: "var(--muted)", fontSize: "1.1rem", lineHeight: "1.6", margin: 0, maxWidth: "600px" }}>
                 As a solo developer, you get direct access to the person actually building your product — no middlemen, no miscommunication. I combine fast execution, technical depth, and a genuine commitment to your goals.

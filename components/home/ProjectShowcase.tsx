@@ -6,9 +6,12 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectModal from "@/components/ProjectModal";
+import { registryItems } from "@/lib/registryData";
 
 export default function ProjectShowcase() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [activeProject, setActiveProject] = useState<number | null>(null);
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -42,14 +45,29 @@ export default function ProjectShowcase() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    if (typeof document !== "undefined" && document.documentElement && document.body) {
+      if (activeProject !== null) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+        if (typeof window !== "undefined" && (window as any).lenis) {
+          (window as any).lenis.stop();
+        }
+      } else {
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+        if (typeof window !== "undefined" && (window as any).lenis) {
+          (window as any).lenis.start();
+        }
+      }
+    }
+  }, [activeProject]);
+
   return (
-    <section ref={containerRef} className="section-padding" style={{ position: "relative", zIndex: 2 }}>
+    <section id="projects" ref={containerRef} className="section-padding" style={{ position: "relative", zIndex: 2 }}>
       <div className="container">
         {/* Section Header */}
         <div className="project-header-wrapper" style={{ marginBottom: "60px", maxWidth: "600px" }}>
-          <span className="eyebrow-mono" style={{ color: "var(--muted)", marginBottom: "12px", display: "inline-block" }}>
-            Case Studies
-          </span>
           <h2
             className="section-header-title font-display"
             style={{
@@ -61,11 +79,8 @@ export default function ProjectShowcase() {
               letterSpacing: "-0.03em"
             }}
           >
-            Featured Systems <span className="font-serif-i" style={{ color: "var(--muted)" }}>Deployed</span>
+            Projects
           </h2>
-          <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: "1.6" }}>
-            Explore how I translate business briefs into high-impact digital systems.
-          </p>
         </div>
 
         {/* Split Screen Showcase */}
@@ -91,7 +106,7 @@ export default function ProjectShowcase() {
                   img: "/images/project2_img1.jpg"
                 },
                 {
-                  id: "customer-agent",
+                  id: "movie-app",
                   code: "PRJ-03",
                   title: "Movie Social App",
                   category: "React Native App",
@@ -108,12 +123,16 @@ export default function ProjectShowcase() {
                 }
               ].map((proj, idx) => {
                 const isActive = hoveredCard === proj.id || (!hoveredCard && proj.id === "nexus-room");
+                const regIdx = registryItems.findIndex(r => r.id === proj.id);
                 return (
-                  <Link
-                    href="/works"
+                  <div
                     key={proj.id}
                     className={`split-list-item ${isActive ? "active" : ""}`}
                     onMouseEnter={() => setHoveredCard(proj.id)}
+                    onClick={() => {
+                      if (regIdx !== -1) setActiveProject(regIdx);
+                    }}
+                    style={{ cursor: "pointer" }}
                   >
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <span className="item-number">0{idx + 1}</span>
@@ -124,10 +143,7 @@ export default function ProjectShowcase() {
                         </div>
                       </div>
                     </div>
-                    <div className="view-case-pill">
-                      View Case <ArrowRight size={14} />
-                    </div>
-                  </Link>
+                  </div>
                 );
               })}
             </div>
@@ -138,7 +154,7 @@ export default function ProjectShowcase() {
             {[
               { id: "nexus-room", img: "/images/custom-project-1.png" },
               { id: "sheild-ai", img: "/images/project2_img1.jpg" },
-              { id: "customer-agent", img: "/images/project3_img1.jpg" },
+              { id: "movie-app", img: "/images/project3_img1.jpg" },
               { id: "restaurant-app", img: "/images/restaurant_app_ui.png" }
             ].map((proj) => {
               const isActive = hoveredCard === proj.id || (!hoveredCard && proj.id === "nexus-room");
@@ -163,6 +179,7 @@ export default function ProjectShowcase() {
           </div>
         </div>
       </div>
+      <ProjectModal activeProject={activeProject} setActiveProject={setActiveProject} />
     </section>
   );
 }

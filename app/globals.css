@@ -5571,9 +5571,8 @@ div[style*="padding: 0 24px 24px"] {
   font-size: 0.72rem;
   letter-spacing: 0.03em;
   white-space: nowrap;
-  box-shadow:
-    0 4px 18px rgba(0, 0, 0, 0.3),
-    padding: 4px 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  padding: 4px 10px;
   border-radius: 99px;
   font-family: var(--font-mono), monospace;
   font-size: 0.68rem;

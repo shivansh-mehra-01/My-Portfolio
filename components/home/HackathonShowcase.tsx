@@ -74,6 +74,7 @@ export default function HackathonShowcase() {
 
   return (
     <section
+      id="achievements"
       ref={containerRef}
       className="section-padding"
       style={{
@@ -97,7 +98,7 @@ export default function HackathonShowcase() {
               color: "#FFFFFF",
             }}
           >
-            National Hackathons <span className="font-serif-i" style={{ color: "var(--accent)" }}>Won</span>
+            Achievements
           </h2>
           <p style={{ color: "#A0A0A0", fontSize: "0.95rem", marginTop: "8px" }}>
             I have competed nationally, building and scaling systems under intense time pressure.
@@ -216,7 +217,7 @@ export default function HackathonShowcase() {
                   }}
                 />
                 <Image
-                  src="/images/hackathon_tic_2.jpg"
+                  src="/images/hackathon_tic.jpg"
                   alt="Technocrats Innovation Challenge 1st prize certificate"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -389,7 +390,7 @@ export default function HackathonShowcase() {
                   }}
                 />
                 <Image
-                  src="/images/hackathon_bgi_2.png"
+                  src="/images/hackathon_bgi.jpg"
                   alt="BGI Hackathon 2026 runner-up certificate"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

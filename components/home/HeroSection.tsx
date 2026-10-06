@@ -50,7 +50,7 @@ export default function HeroSection() {
         display: "flex",
         alignItems: "center",
         position: "relative",
-        padding: "100px 0 60px",
+        padding: "80px 0 20px",
         overflow: "hidden"
       }}
     >
@@ -67,36 +67,14 @@ export default function HeroSection() {
         }}
       >
         {/* Left Content Area */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 
-          {/* Top Badge */}
-          <div className="hero-badge" style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "10px",
-            border: "1px solid var(--card-border)",
-            padding: "8px 16px",
-            borderRadius: "4px",
-            width: "fit-content",
-          }}>
-            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--foreground)" }} />
-            <span style={{
-              color: "var(--foreground)",
-              fontFamily: "var(--font-mono), monospace",
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em"
-            }}>
-              Available for Freelance Work
-            </span>
-          </div>
+
 
           {/* Headline */}
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(3rem, 6vw, 5.5rem)",
               fontWeight: 800,
               color: "var(--foreground)",
               lineHeight: 1.05,
@@ -104,13 +82,13 @@ export default function HeroSection() {
               margin: 0,
             }}
           >
-            <div className="hero-title-line">
+            <div className="hero-title-line" style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 600, color: "var(--muted)", marginBottom: "8px" }}>
               Hi, I&apos;m Shivansh.
             </div>
-            <div className="hero-title-line" style={{ color: "var(--muted)" }}>
+            <div className="hero-title-line" style={{ fontSize: "clamp(2.8rem, 5.5vw, 5rem)" }}>
               I Build Digital
             </div>
-            <div className="hero-title-line">
+            <div className="hero-title-line" style={{ fontSize: "clamp(2.8rem, 5.5vw, 5rem)", color: "var(--foreground)" }}>
               Products.
             </div>
           </h1>
@@ -137,7 +115,7 @@ export default function HeroSection() {
               <div key={i} className="hero-metric" style={{
                 border: "1px solid var(--card-border)",
                 borderRadius: "4px",
-                padding: "20px 16px",
+                padding: "16px 12px",
                 display: "flex",
                 flexDirection: "column",
                 gap: "8px",
@@ -185,7 +163,7 @@ export default function HeroSection() {
           }}>
 
             {/* Profile Image */}
-            <div style={{ width: "100%", height: "400px", overflow: "hidden", position: "relative", marginBottom: "16px" }}>
+            <div style={{ width: "100%", height: "300px", overflow: "hidden", position: "relative", marginBottom: "16px" }}>
               <img
                 src="/images/team_member_2.jpg"
                 alt="Shivansh Mehra"
@@ -193,11 +171,7 @@ export default function HeroSection() {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  filter: "grayscale(100%) contrast(1.1)",
-                  transition: "filter 0.5s ease"
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.filter = "grayscale(0%) contrast(1)"}
-                onMouseLeave={(e) => e.currentTarget.style.filter = "grayscale(100%) contrast(1.1)"}
               />
               {/* Status overlay badge */}
               <div style={{

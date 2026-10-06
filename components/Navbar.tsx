@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { Send } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -35,6 +36,17 @@ export default function Navbar() {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     closeMenu();
+    if (path.includes("#")) {
+      e.preventDefault();
+      router.push(path);
+      const id = path.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        // Offset for sticky navbar if needed, otherwise just scrollIntoView
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
     if (pathname === path) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -57,27 +69,22 @@ export default function Navbar() {
         >
           Home
         </Link>
+
         <Link
           href="/works"
           className={`${styles.link} ${isActive("/works") ? styles.active : ""}`}
           onClick={(e) => handleLinkClick(e, "/works")}
         >
-          Portfolio
+          Projects
         </Link>
         <Link
-          href="/services"
-          className={`${styles.link} ${isActive("/services") ? styles.active : ""}`}
-          onClick={(e) => handleLinkClick(e, "/services")}
+          href="/#achievements"
+          className={styles.link}
+          onClick={(e) => handleLinkClick(e, "/#achievements")}
         >
-          Services
+          Achievements
         </Link>
-        <Link
-          href="/about"
-          className={`${styles.link} ${isActive("/about") ? styles.active : ""}`}
-          onClick={(e) => handleLinkClick(e, "/about")}
-        >
-          About
-        </Link>
+
         <Link
           href="/contact"
           className={`${styles.link} ${isActive("/contact") ? styles.active : ""}`}
