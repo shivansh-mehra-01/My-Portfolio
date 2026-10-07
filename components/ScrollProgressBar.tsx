@@ -29,11 +29,11 @@ export default function ScrollProgressBar() {
         position: "fixed", 
         top: 0, 
         left: 0, 
-        height: "2.5px", 
+        height: "0.2px", 
         width: "0%", 
-        background: "linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9)", 
+        background: "#ffffff", 
         zIndex: 10001, 
-        boxShadow: "0 0 12px rgba(14, 165, 233, 0.5)", 
+        boxShadow: "none", 
         transition: "width 0.08s linear", 
         pointerEvents: "none" 
       }} 
