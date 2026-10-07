@@ -7,7 +7,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CanvasBackgroundWrapper from "@/components/CanvasBackgroundWrapper";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk-sans",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shivansh Mehra — Web & Mobile Developer",
     description:
-    "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
+      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
     url: "https://shivansh-portfolio.shivanshji.in",
     siteName: "Shivansh Mehra",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shivansh Mehra — Web & Mobile Developer",
     description:
-    "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
+      "Full-stack developer building production-grade web apps, mobile apps, and AI systems.",
     images: ["/og-image.jpg"],
   },
 };

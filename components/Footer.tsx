@@ -24,13 +24,13 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
 }
 
 export default function Footer() {
-  const primaryGlow = "#FF6B2C";
-  const secondaryGlow = "#FFB800";
-  const borderSoft = "rgba(255, 255, 255, 0.08)";
+  const primaryGlow = "#ffffff";
+  const secondaryGlow = "#00e588";
+  const borderSoft = "var(--card-border)";
 
   return (
     <footer style={{ 
-      background: "rgba(8, 5, 2, 0.95)", 
+      background: "var(--background)", 
       position: "relative",
       borderTop: `1px solid ${borderSoft}`,
       overflow: "hidden"
@@ -43,7 +43,7 @@ export default function Footer() {
         transform: "translate(-50%, -50%)",
         width: "100%",
         height: "200px",
-        background: `radial-gradient(ellipse at center, rgba(255, 107, 44, 0.08) 0%, transparent 60%)`,
+        background: `radial-gradient(ellipse at center, rgba(0, 229, 136, 0.08) 0%, transparent 60%)`,
         pointerEvents: "none",
         zIndex: 0
       }} />
@@ -130,7 +130,7 @@ export default function Footer() {
                   backdropFilter: "blur(10px)"
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(255, 107, 44, 0.1)";
+                  e.currentTarget.style.background = "rgba(0, 229, 136, 0.1)";
                   e.currentTarget.style.borderColor = primaryGlow;
                   e.currentTarget.style.color = primaryGlow;
                   e.currentTarget.style.transform = "translateY(-2px)";
@@ -168,7 +168,6 @@ export default function Footer() {
               { label: "Home", href: "/" },
               { label: "Portfolio", href: "/works" },
               { label: "Services", href: "/services" },
-              { label: "About Me", href: "/about" },
               { label: "Contact", href: "/contact" },
             ].map((item) => (
               <Link
@@ -223,8 +222,8 @@ export default function Footer() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "10px",
-                background: "rgba(255, 184, 0, 0.05)",
-                border: `1px solid rgba(255, 184, 0, 0.2)`,
+                background: "rgba(0, 229, 136, 0.05)",
+                border: `1px solid rgba(0, 229, 136, 0.2)`,
                 borderRadius: "100px",
                 color: secondaryGlow,
                 fontSize: "0.9rem",
@@ -234,12 +233,12 @@ export default function Footer() {
                 transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(255, 184, 0, 0.15)";
-                e.currentTarget.style.boxShadow = `0 4px 15px rgba(255, 184, 0, 0.2)`;
+                e.currentTarget.style.background = "rgba(0, 229, 136, 0.15)";
+                e.currentTarget.style.boxShadow = `0 4px 15px rgba(0, 229, 136, 0.2)`;
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "rgba(255, 184, 0, 0.05)";
+                e.currentTarget.style.background = "rgba(0, 229, 136, 0.05)";
                 e.currentTarget.style.boxShadow = "none";
                 e.currentTarget.style.transform = "none";
               }}
@@ -286,13 +285,13 @@ export default function Footer() {
           </h4>
           <div style={{ 
             padding: "24px",
-            background: "rgba(10, 7, 2, 0.6)",
-            border: `1px solid rgba(255, 107, 44, 0.2)`,
+            background: "var(--card-bg)",
+            border: `1px solid var(--card-border)`,
             borderRadius: "16px",
             position: "relative",
             overflow: "hidden",
             backdropFilter: "blur(10px)",
-            boxShadow: "inset 0 0 30px rgba(255, 107, 44, 0.05)"
+            boxShadow: "inset 0 0 30px rgba(0, 229, 136, 0.05)"
           }}>
             <div style={{
               position: "absolute",
@@ -305,7 +304,7 @@ export default function Footer() {
             }} />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
               <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Based In</span>
-              <span style={{ color: secondaryGlow, display: "flex", alignItems: "center", gap: "6px", fontSize: "0.7rem", fontFamily: "var(--font-mono), monospace", fontWeight: 700, background: "rgba(255, 184, 0, 0.1)", padding: "2px 8px", borderRadius: "100px", border: "1px solid rgba(255, 184, 0, 0.2)" }}>
+              <span style={{ color: secondaryGlow, display: "flex", alignItems: "center", gap: "6px", fontSize: "0.7rem", fontFamily: "var(--font-mono), monospace", fontWeight: 700, background: "rgba(0, 229, 136, 0.1)", padding: "2px 8px", borderRadius: "100px", border: "1px solid rgba(0, 229, 136, 0.2)" }}>
                 <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: secondaryGlow, boxShadow: `0 0 6px ${secondaryGlow}`, animation: "pulse 2s infinite" }} />
                 OPEN TO WORK
               </span>

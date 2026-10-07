@@ -69,20 +69,19 @@ export default function Navbar() {
         >
           Home
         </Link>
-
+        <Link
+          href="/services"
+          className={`${styles.link} ${isActive("/services") ? styles.active : ""}`}
+          onClick={(e) => handleLinkClick(e, "/services")}
+        >
+          Services
+        </Link>
         <Link
           href="/works"
           className={`${styles.link} ${isActive("/works") ? styles.active : ""}`}
           onClick={(e) => handleLinkClick(e, "/works")}
         >
           Projects
-        </Link>
-        <Link
-          href="/#achievements"
-          className={styles.link}
-          onClick={(e) => handleLinkClick(e, "/#achievements")}
-        >
-          Achievements
         </Link>
 
         <Link

@@ -60,6 +60,43 @@ export const registryItems = [
     bentoSpan: "span-4"
   },
   {
+    type: "championship",
+    id: "iitg-hackathon",
+    code: "HACK-03",
+    title: "WattsNext EnergyAgri Nexus Hackathon",
+    subtitle: "Organized by Indian Institute of Technology, Guwahati | 1st Place + ₹30,000 Cash Prize",
+    desc: (
+      <span>
+        Competing against around <strong style={{ color: "#ffffff" }}>50 teams</strong>, my team secured the <strong style={{ color: "#00e588" }}>1st Prize (₹30,000)</strong> at the prestigious WattsNext EnergyAgri Nexus Hackathon at IIT Guwahati.
+      </span>
+    ),
+    details: (
+      <span>
+        Through multiple rounds including PPT shortlisting and final project demonstration before an esteemed panel of IIT Guwahati professors, our team demonstrated exceptional innovation with <strong style={{ color: "#ffffff" }}>Agri_PV_Navigator</strong>, a farmer-centric mobile application for exploring and evaluating Agrivoltaic (Agri-PV) systems.
+      </span>
+    ),
+    tags: ["1st Place", "IIT Guwahati", "₹30,000"],
+    icon: <Trophy size={22} />,
+    color: "#00e588",
+    colorRGB: "0, 229, 136",
+    metricsList: [
+      { val: "1st Place", name: "Rank" },
+      { val: "₹30,000", name: "Grand Prize" },
+      { val: "50 Teams", name: "Competitors" }
+    ],
+    achievement: "🥇 1ST PLACE WINNER",
+    img: "/images/hackathon_iitg.jpeg",
+    imgs: ["/images/hackathon_iitg.jpeg", "/images/hackathon_iitg.jpeg"],
+    badge: "🥇 1ST PLACE WINNER",
+    org: "Indian Institute of Technology, Guwahati",
+    scope: (
+      <span>
+        Developed a <strong style={{ color: "#ffffff" }}>farmer-centric mobile application</strong> for exploring and evaluating <strong style={{ color: "#ffffff" }}>Agrivoltaic (Agri-PV) systems</strong>. Integrates site assessment, system design, visualization, and <strong style={{ color: "#ffffff" }}>preliminary techno-economic insights</strong> into a unified platform.
+      </span>
+    ),
+    bentoSpan: "span-6"
+  },
+  {
     type: "project",
     id: "sheild-ai",
     code: "PRJ-02",

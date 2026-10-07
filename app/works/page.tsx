@@ -166,7 +166,7 @@ export default function Works() {
 
 
 
-  const filteredItems = registryItems.filter((item) => filter === "all" || item.type === filter);
+  const filteredItems = registryItems.filter((item) => item.type === "project");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -207,41 +207,8 @@ export default function Works() {
             Engineering <span className="font-serif-i" style={{ color: "var(--accent)" }}>Archives</span>
           </h1>
           <p style={{ color: "var(--muted)", fontSize: "1.05rem", lineHeight: "1.6", maxWidth: "650px", margin: "0 auto" }}>
-            A curated index of my production systems, software deployments, and award-winning national hackathon championships.
+            A curated index of my production systems and software deployments.
           </p>
-        </div>
-
-        {/* FILTERING */}
-        <div className="container" style={{ marginBottom: "40px", display: "flex", justifyContent: "center" }}>
-          <div style={{
-            display: "inline-flex",
-            background: "var(--card-bg)",
-            padding: "6px",
-            borderRadius: "99px",
-            border: "1px solid var(--card-border)"
-          }}>
-            {["all", "project", "championship"].map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f as any)}
-                style={{
-                  background: filter === f ? "rgba(255, 255, 255, 0.08)" : "transparent",
-                  color: filter === f ? "var(--foreground)" : "var(--muted)",
-                  border: "none",
-                  padding: "8px 24px",
-                  borderRadius: "99px",
-                  fontSize: "0.85rem",
-                  fontWeight: 600,
-                  fontFamily: "var(--font-space-grotesk), sans-serif",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease",
-                  textTransform: "capitalize"
-                }}
-              >
-                {f === "all" ? "All Works" : f === "project" ? "Deployments" : "Championships"}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* VISUAL BENTO GRID */}
